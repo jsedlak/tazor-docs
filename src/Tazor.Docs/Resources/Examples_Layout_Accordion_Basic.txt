@@ -1,4 +1,10 @@
-<Accordion>
+<h3 class="font-semibold mb-2 mt-4">Options</h3>
+<div class="flex items-center gap-4 mb-4">
+    <p>Allow Multi Open</p>
+    <Switch @bind-IsChecked=_allowMultiOpen />
+</div>
+
+<Accordion MultiOpen=@_allowMultiOpen>
     <AccordionFold>
         <Header>Accordion Fold 1</Header>
         <Content>
@@ -18,3 +24,7 @@
         </Content>
     </AccordionFold>
 </Accordion>
+
+@code {
+    private bool _allowMultiOpen = false;
+}
