@@ -1,0 +1,8 @@
+﻿<ul class="list-disc ml-6 mt-1 mb-1">
+    @ChildContent
+</ul>
+
+@code {
+    [Parameter] 
+    public RenderFragment? ChildContent { get; set; }
+}

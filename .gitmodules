@@ -1,0 +1,3 @@
+[submodule "tazor"]
+	path = tazor
+	url = https://github.com/jsedlak/tazor.git

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -20,9 +20,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
-    <PackageReference Include="Tazor.Components" Version="0.1.0-beta" />
-    <PackageReference Include="Tazor.Http" Version="0.1.0-beta" />
-    <PackageReference Include="Tazor.Wasm" Version="0.1.0-beta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\tazor\src\Tazor.Components\Tazor.Components.csproj" />
+    <ProjectReference Include="..\..\tazor\src\Tazor.Wasm\Tazor.Wasm.csproj" />
   </ItemGroup>
 
   <ItemGroup>

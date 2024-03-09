@@ -592,12 +592,20 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .inset-0 {
   inset: 0px;
 }
 
 .top-10 {
   top: 2.5rem;
+}
+
+.top-8 {
+  top: 2rem;
 }
 
 .z-50 {
@@ -622,6 +630,10 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-2 {
@@ -662,6 +674,42 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline-block {
@@ -748,8 +796,16 @@ video {
   width: 100%;
 }
 
+.w-1\/3 {
+  width: 33.333333%;
+}
+
 .min-w-full {
   min-width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .flex-shrink-0 {
@@ -782,6 +838,10 @@ video {
   list-style-type: none;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -796,6 +856,10 @@ video {
 
 .place-items-end {
   place-items: end;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -828,6 +892,11 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -1117,6 +1186,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1149,6 +1223,10 @@ video {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
 }
 
 .text-left {
@@ -1265,6 +1343,21 @@ video {
 .text-yellow-700 {
   --tw-text-opacity: 1;
   color: rgb(161 98 7 / var(--tw-text-opacity));
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1494,5 +1587,21 @@ video {
 
   .sm\:p-0 {
     padding: 0px;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

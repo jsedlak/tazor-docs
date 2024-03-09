@@ -75,10 +75,10 @@
   },
   "tabNav": {
     "wrapper": "flex items-center gap-2 my-2 rounded bg-gray-100 border-t-2 border-gray-100 dark:bg-gray-800 dark:border-gray-800",
-    "selectedItem": "border-b-2 border-indigo-500 py-2 px-3 cursor-pointer text-sm",
-    "item": "py-2 px-3 cursor-pointer border-b-2 border-gray-100 text-sm dark:border-gray-800",
-    "selectedLink": "",
-    "link": ""
+    "selectedItem": "border-b-2 border-indigo-500 cursor-pointer text-sm",
+    "item": "cursor-pointer border-b-2 border-gray-100 text-sm dark:border-gray-800",
+    "selectedLink": "block py-2 px-4",
+    "link": "block py-2 px-4"
   },
   "forms": {
     "label": "",
@@ -86,7 +86,7 @@
     "textBox": "",
     "selectInput": "px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white"
   },
-  "dropdown": { 
+  "dropdown": {
     "button": "",
     "panel": "",
     "item": "",
@@ -123,6 +123,17 @@
       "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800",
       "commandName": "",
       "commandDescription": "opacity-75 text-sm"
+    },
+    "darkModeSwitch": {
+      "link": "inline-block cursor-pointer text-white"
+    }
+  },
+  "navigation": {
+    "breadcrumb": {
+      "container": "mt-3 mb-3",
+      "list": "flex gap-2 items-center",
+      "listItem": "",
+      "link": ""
     }
   }
 }

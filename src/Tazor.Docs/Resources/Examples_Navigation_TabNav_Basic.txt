@@ -1,0 +1,12 @@
+<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
+
+@code {
+    private NavItem? _selectedExampleNavItem;
+    private IEnumerable<NavItem> _exampleNavItems = new[]
+    {
+        new NavItem("Tab 1"),
+        new NavItem("Tab 2"),
+        new NavItem("Tab 3"),
+        new NavItem("Tab 4")
+    };
+}

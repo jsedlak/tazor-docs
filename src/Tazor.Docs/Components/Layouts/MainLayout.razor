@@ -2,8 +2,13 @@
 
 <div class="w-full">
     <Header />
-    <main class="container mx-auto">
-        @Body
-    </main>
+    <div class="mx-auto flex w-full items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
+        <aside class="sticky top-8 flex-shrink-0 lg:block">
+            <Sidebar />
+        </aside>
+        <main class="flex-1">
+            @Body
+        </main>
+    </div>
     <Footer />
 </div>

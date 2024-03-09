@@ -1,0 +1,24 @@
+﻿@inject NavigationManager Navigation
+<li>
+    <a class=@($"text-sm hover:text-white {GetActiveClass()}") href="@Href">@Title</a>
+</li>
+
+@code {
+    [Parameter]
+    public string Href { get; set; } = "/";
+
+    [Parameter]
+    public string Title { get; set; } = "Untitled";
+
+    private string GetActiveClass()
+    {
+        return Navigation.Uri.Contains(Href) ? "text-white underline" : "text-gray-300";
+    }
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += (sender, args) => StateHasChanged();
+        base.OnInitialized();
+
+    }
+}

@@ -79,7 +79,7 @@ namespace Tazor.Docs {
         ///    &lt;/Content&gt;
         ///&lt;/Alert&gt;
         ///
-        ///&lt;Alert Type=@AlertType.Erro [rest of string was truncated]&quot;;.
+        ///&lt;Alert Type=@AlertType.Error Title=&quot;Test Erro [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_Alerts {
             get {
@@ -136,7 +136,7 @@ namespace Tazor.Docs {
         ///    private IEnumerable&lt;Column&lt;Invoice&gt;&gt; _invoiceColumns = new[]
         ///    {
         ///        new Column&lt;Invoice&gt; { Title = &quot;Id&quot;, Field = m =&gt; m.Id },
-        ///       [rest of string was truncated]&quot;;.
+        ///        new Column&lt;Invoic [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_DataGrid {
             get {
@@ -145,11 +145,83 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to &lt;select @onchange=HandlePanelPlacementChanged class=@Theme.Current.Forms.SelectInput&gt;
+        ///    @foreach(var val in Enum.GetValues(typeof(PanelPlacement)))
+        ///    {
+        ///        &lt;option selected=@((PanelPlacement)val == _selectedPlacement) value=@val&gt;@Enum.GetName(typeof(PanelPlacement), val)&lt;/option&gt;
+        ///    }
+        ///&lt;/select&gt;
+        ///
+        ///&lt;Button Clicked=@(() =&gt; { _isFlyoutOpen = true; StateHasChanged(); })&gt;Open Flyout&lt;/Button&gt;
+        ///
+        ///&lt;Flyout Placement=_selectedPlacement Title=&quot;Test Flyout&quot; @bind-IsVisible=_isFlyoutOpen&gt;
+        ///    &lt;Content&gt;
+        ///        &lt;p&gt;T [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_Flyout {
             get {
                 return ResourceManager.GetString("Examples_Flyout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Breadcrumb Items=&quot;_breadcrumb&quot; /&gt;
+        ///
+        ///@code {
+        ///    private IEnumerable&lt;NavItem&gt; _breadcrumb = new NavItem[]
+        ///    {
+        ///        new NavItem(&quot;Home&quot;) { Href = &quot;/&quot; },
+        ///        new NavItem(&quot;Navigation&quot;),
+        ///        new NavItem(&quot;Breadcrumbs&quot;)
+        ///    };
+        ///}.
+        /// </summary>
+        public static string Examples_Navigation_Breadcrumb_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Navigation_Breadcrumb_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Breadcrumb Items=&quot;_breadcrumb&quot;&gt;
+        ///    &lt;DelimiterFragment&gt;
+        ///        @HeroIcons.AcademicCap()
+        ///    &lt;/DelimiterFragment&gt;
+        ///&lt;/Breadcrumb&gt;
+        ///
+        ///@code {
+        ///    private IEnumerable&lt;NavItem&gt; _breadcrumb = new NavItem[]
+        ///    {
+        ///        new NavItem(&quot;Home&quot;) { Href = &quot;/&quot; },
+        ///        new NavItem(&quot;Navigation&quot;),
+        ///        new NavItem(&quot;Breadcrumbs&quot;)
+        ///    };
+        ///}.
+        /// </summary>
+        public static string Examples_Navigation_Breadcrumb_CustomDelimiter {
+            get {
+                return ResourceManager.GetString("Examples_Navigation_Breadcrumb_CustomDelimiter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem /&gt;
+        ///
+        ///@code {
+        ///    private NavItem? _selectedExampleNavItem;
+        ///    private IEnumerable&lt;NavItem&gt; _exampleNavItems = new[]
+        ///    {
+        ///        new NavItem(&quot;Tab 1&quot;),
+        ///        new NavItem(&quot;Tab 2&quot;),
+        ///        new NavItem(&quot;Tab 3&quot;),
+        ///        new NavItem(&quot;Tab 4&quot;)
+        ///    };
+        ///}
+        ///.
+        /// </summary>
+        public static string Examples_Navigation_TabNav_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Navigation_TabNav_Basic", resourceCulture);
             }
         }
         
@@ -178,15 +250,6 @@ namespace Tazor.Docs {
         public static string Examples_Switch {
             get {
                 return ResourceManager.GetString("Examples_Switch", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Value.
-        /// </summary>
-        public static string Test {
-            get {
-                return ResourceManager.GetString("Test", resourceCulture);
             }
         }
     }

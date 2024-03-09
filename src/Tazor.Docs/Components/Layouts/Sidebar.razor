@@ -1,0 +1,78 @@
+﻿@inject NavigationManager Navigation
+<ul>
+    <li class="mb-4">
+        <NavHeader Title="Getting Started" Href="/" />
+        <NavList>
+            <NavListItem Title="Introduction" Href="/#introduction" />
+            <NavListItem Title="Installing" Href="/#installing" />
+            <NavListItem Title="Tailwind CLI" Href="/#tailwindcli" />
+        </NavList>
+    </li>
+    <li class="mb-4">
+        <NavHeader Title="Layout Components" Href="/" />
+        <NavList>
+            <NavListItem Title="Flyout" Href="/layout/flyout" />
+            <NavListItem Title="Dialog" Href="/layout/dialog" />
+            <NavListItem Title="Command Palette" Href="/layout/command-palette" />
+            <NavListItem Title="Accordion" Href="/layout/accordion" />
+        </NavList>
+    </li>
+    <li class="mb-4">
+        <NavHeader Title="Data Components" Href="/" />
+        <NavList>
+            <NavListItem Title="DataGrid" Href="/data/datagrid" />
+            <NavListItem Title="TreeView" Href="/data/treeview" />
+            <NavListItem Title="ListView" Href="/data/listview" />
+        </NavList>
+    </li>
+    <li class="mb-4">
+        <NavHeader Title="Navigation Components" Href="/" />
+        <NavList>
+            <NavListItem Title="TabNav" Href="/navigation/tabs" />
+            <NavListItem Title="Breadcrumb" Href="/navigation/breadcrumbs" />
+            <NavListItem Title="Pager" Href="/navigation/pager" />
+        </NavList>
+    </li>
+    <li class="mb-4">
+        <NavHeader Title="Form Components" Href="/" />
+        <NavList>
+            <NavListItem Title="Buttons" Href="/forms/buttons" />
+            <NavListItem Title="ComboBox" Href="/forms/combobox" />
+            <NavListItem Title="TagBox" Href="/forms/tagbox" />
+            <NavListItem Title="File Upload" Href="/forms/file-upload" />
+            <NavListItem Title="Switch" Href="/forms/switch" />
+        </NavList>
+    </li>
+    <li class="mb-4">
+        <NavHeader Title="Content Components" Href="/" />
+        <NavList>
+            <NavListItem Title="Hero Icons" Href="/content/hero-icons" />
+            <NavListItem Title="Brand Icons" Href="/content/brand-icons" />
+            <NavListItem Title="Alerts" Href="/content/alerts" />
+            <NavListItem Title="Badges" Href="/content/badges" />
+            <NavListItem Title="Code Block" Href="/content/code-block" />
+            <NavListItem Title="Popover" Href="/content/popover" />
+        </NavList>
+    </li>
+    <li class="mb-4">
+        <NavHeader Title="Utilities" Href="/" />
+        <NavList>
+            <NavListItem Title="Reveal" Href="/utilities/reveal" />
+            <NavListItem Title="Click Container" Href="/utilities/click-container" />
+            <NavListItem Title="Dark Mode Switcher" Href="/utilities/dark-mode-switcher" />
+            <NavListItem Title="Breakpoint Indicator" Href="/utilities/breakpoint-indicator" />
+        </NavList>
+    </li>
+    <li class="mb-4">
+        <NavHeader Title="Theming" Href="/theming" />
+    </li>
+</ul>
+@code {
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += (sender, args) =>
+        {
+            StateHasChanged();
+        };
+    }
+}

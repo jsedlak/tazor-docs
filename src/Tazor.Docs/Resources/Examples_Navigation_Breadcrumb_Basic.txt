@@ -1,0 +1,10 @@
+<Breadcrumb Items="_breadcrumb" />
+
+@code {
+    private IEnumerable<NavItem> _breadcrumb = new NavItem[]
+    {
+        new NavItem("Home") { Href = "/" },
+        new NavItem("Navigation"),
+        new NavItem("Breadcrumbs")
+    };
+}

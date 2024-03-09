@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Docs", "src\Tazor.Docs\Tazor.Docs.csproj", "{048DD5BC-E2F6-4019-8271-342FF1CC7648}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Components", "tazor\src\Tazor.Components\Tazor.Components.csproj", "{B2F6BE57-8A02-4424-85B3-AB801AA3DFD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Wasm", "tazor\src\Tazor.Wasm\Tazor.Wasm.csproj", "{F7E6873A-CAB2-4E92-AE07-E411B50A9FF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Core", "tazor\src\Tazor.Core\Tazor.Core.csproj", "{B8989AB9-353E-4073-9C91-8F88BC971531}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{048DD5BC-E2F6-4019-8271-342FF1CC7648}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048DD5BC-E2F6-4019-8271-342FF1CC7648}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{048DD5BC-E2F6-4019-8271-342FF1CC7648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F6BE57-8A02-4424-85B3-AB801AA3DFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F6BE57-8A02-4424-85B3-AB801AA3DFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F6BE57-8A02-4424-85B3-AB801AA3DFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F6BE57-8A02-4424-85B3-AB801AA3DFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E6873A-CAB2-4E92-AE07-E411B50A9FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E6873A-CAB2-4E92-AE07-E411B50A9FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E6873A-CAB2-4E92-AE07-E411B50A9FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E6873A-CAB2-4E92-AE07-E411B50A9FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8989AB9-353E-4073-9C91-8F88BC971531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8989AB9-353E-4073-9C91-8F88BC971531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8989AB9-353E-4073-9C91-8F88BC971531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8989AB9-353E-4073-9C91-8F88BC971531}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

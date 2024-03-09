@@ -1,0 +1,9 @@
+﻿<a href=@Href class="font-semibold font-lg">@Title</a>
+
+@code {
+    [Parameter]
+    public string Href { get; set; } = "/";
+
+    [Parameter]
+    public string Title { get; set; } = "Untitled";
+}
