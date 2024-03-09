@@ -8,19 +8,19 @@
     <AccordionFold>
         <Header>Accordion Fold 1</Header>
         <Content>
-            <p>Praesent egestas molestie ligula, sed imperdiet urna vehicula nec. Phasellus dapibus auctor lacus, non venenatis augue egestas eget. Integer viverra risus libero, a consectetur velit ultricies varius. Integer in bibendum ligula. Praesent interdum nisl felis, et mollis justo pretium sit amet. Aenean quis nibh porta, tincidunt nunc non, blandit velit. Donec mollis, nunc nec blandit porttitor, nunc ex tempus libero, vel viverra nunc libero a dolor.</p>
+            <p>Praesent egestas molestie ligula, ...</p>
         </Content>
     </AccordionFold>
     <AccordionFold>
         <Header>Accordion Fold 2</Header>
         <Content>
-            <p>Praesent egestas molestie ligula, sed imperdiet urna vehicula nec. Phasellus dapibus auctor lacus, non venenatis augue egestas eget. Integer viverra risus libero, a consectetur velit ultricies varius. Integer in bibendum ligula. Praesent interdum nisl felis, et mollis justo pretium sit amet. Aenean quis nibh porta, tincidunt nunc non, blandit velit. Donec mollis, nunc nec blandit porttitor, nunc ex tempus libero, vel viverra nunc libero a dolor.</p>
+            <p>Praesent egestas molestie ligula, ...</p>
         </Content>
     </AccordionFold>
     <AccordionFold>
         <Header>Accordion Fold 3</Header>
         <Content>
-            <p>Praesent egestas molestie ligula, sed imperdiet urna vehicula nec. Phasellus dapibus auctor lacus, non venenatis augue egestas eget. Integer viverra risus libero, a consectetur velit ultricies varius. Integer in bibendum ligula. Praesent interdum nisl felis, et mollis justo pretium sit amet. Aenean quis nibh porta, tincidunt nunc non, blandit velit. Donec mollis, nunc nec blandit porttitor, nunc ex tempus libero, vel viverra nunc libero a dolor.</p>
+            <p>Praesent egestas molestie ligula, ...</p>
         </Content>
     </AccordionFold>
 </Accordion>
