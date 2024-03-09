@@ -8,10 +8,10 @@
     "button": "",
     "buttonInner": "",
     "alertGlobal": "rounded my-3 flex items-center justify-between border-l-4 px-4 py-3 shadow-md",
-    "alertInfo": "bg-blue-100 border-blue-500 text-blue-700",
-    "alertWarning": "bg-yellow-100 border-yellow-500 text-yellow-700",
-    "alertError": "bg-red-100 border-red-500 text-red-700",
-    "alertSuccess": "bg-green-100 border-green-500 text-green-700",
+    "alertInfo": "bg-blue-100 border-blue-500 text-blue-700 dark:bg-blue-700 dark:border-blue-900 dark:text-white",
+    "alertWarning": "bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-700 dark:border-yellow-900 dark:text-white",
+    "alertError": "bg-red-100 border-red-500 text-red-700 dark:bg-red-700 dark:border-red-900 dark:text-white",
+    "alertSuccess": "bg-green-100 border-green-500 text-green-700 dark:bg-green-700 dark:border-green-900 dark:text-white",
     "alertIcon": "mr-2",
     "section": "mt-2 mb-4",
     "header1": "text-2xl font-semibold mb-2",
@@ -125,7 +125,7 @@
       "commandDescription": "opacity-75 text-sm"
     },
     "darkModeSwitch": {
-      "link": "inline-block cursor-pointer text-white"
+      "link": "inline-block cursor-pointer"
     }
   },
   "navigation": {
@@ -134,6 +134,16 @@
       "list": "flex gap-2 items-center",
       "listItem": "",
       "link": ""
+    }
+  },
+  "layout": {
+    "accordion": {
+      "container": "",
+      "foldContainer": "border wborder-gray-400 dark:border-indigo-800",
+      "foldContainerSelected": "border border-gray-300 dark:border-indigo-700",
+      "foldHeader": "font-semibold bg-gray-400 dark:bg-indigo-800 p-3 cursor-pointer",
+      "foldHeaderSelected": "font-semibold bg-gray-300 dark:bg-indigo-700 p-3 cursor-pointer",
+      "foldContent": "p-3"
     }
   }
 }

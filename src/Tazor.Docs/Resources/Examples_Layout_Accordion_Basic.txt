@@ -1,21 +1,4 @@
-﻿@page "/layout/accordion"
-@using Tazor.Components.Forms
-
-<PageTitle>Accordion - Tazor Docs</PageTitle>
-
-<PageHead Title="Accordion" />
-
-<SubHeader>Basic Usage</SubHeader>
-<p>The <strong>Accordion</strong> component provides a simple mechanism for collapsing or expanding content in a vertical fashion.</p>
-
-
-<h3 class="font-semibold mb-2 mt-4">Options</h3>
-<div class="flex items-center gap-4 mb-4">
-    <p>Allow Multi Open</p>
-    <Switch @bind-IsChecked=_allowMultiOpen />
-</div>
-
-<Accordion MultiOpen=@_allowMultiOpen>
+<Accordion>
     <AccordionFold>
         <Header>Accordion Fold 1</Header>
         <Content>
@@ -35,9 +18,3 @@
         </Content>
     </AccordionFold>
 </Accordion>
-
-<CodeBlock Code=@Resources.Examples_Layout_Accordion_Basic />
-
-@code {
-    private bool _allowMultiOpen = false;
-}

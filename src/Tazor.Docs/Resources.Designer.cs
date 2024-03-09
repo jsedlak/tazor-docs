@@ -174,6 +174,19 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;Accordion&gt;
+        ///    &lt;AccordionFold&gt;
+        ///        &lt;Header&gt;Accordion Fold 1&lt;/Header&gt;
+        ///        &lt;Content&gt;
+        ///            &lt;p&gt;Praesent egestas molestie ligula, sed imperdiet urna vehicula nec. Phasellus dapibus auctor lacus, non venenatis augue egestas eget. Integer viverra risus libero, a consectetur velit ultricies varius. Integer in bibendum ligula. Praesent interdum nisl felis, et mollis justo pretium sit amet. Aenean quis nibh porta, tincidunt nunc non, blandit velit. Donec mollis, nunc nec blandit porttitor, nunc ex  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_Layout_Accordion_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Layout_Accordion_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;Breadcrumb Items=&quot;_breadcrumb&quot; /&gt;
         ///
         ///@code {
