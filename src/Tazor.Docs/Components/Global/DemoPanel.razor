@@ -1,0 +1,7 @@
+﻿<div class="mt-1 mb-1 p-3 rounded flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+    @ChildContent
+</div>
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

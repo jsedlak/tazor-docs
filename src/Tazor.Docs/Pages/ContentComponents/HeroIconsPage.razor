@@ -1,60 +1,54 @@
 ﻿@page "/content/hero-icons"
 
-<PageTitle>HeroIcons - Tazor Docs</PageTitle>
+<PageTitle>Hero Icons - Tazor Docs</PageTitle>
 
-<PageHead Title="HeroIcons" />
+<PageHead Title="Hero Icons" />
 
-<p class="leading-loose mb-4">The DataGrid is a Blazor component designed for presenting tabular data in a web application. It offers built-in features for paging and sorting data, enhancing the user experience and making it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view different sections of data, and they can also arrange the data in ascending or descending order based on specific columns for better organization and analysis. This component simplifies the process of creating dynamic, interactive tables in Blazor web applications, providing a convenient way to display and manipulate data.</p>
+<p class="leading-loose mb-4">Tazor supports all <a href="https://heroicons.com/" target="_blank">Hero Icons</a> as markup strings.</p>
 
-<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
-@if (_selectedExampleNavItem?.Key == "demo")
-{
-    <DataGrid Items=_invoices Columns=_invoiceColumns />
+<SubHeader>Basic Usage</SubHeader>
+
+<DemoPanel>
+@HeroIcons.ArchiveBox("block", "w-6 h-6")
+</DemoPanel>
+
+<CodeBlock Code=@Resources.Examples_Content_HeroIcons_Basic></CodeBlock>
+
+<SubHeader>All Icons</SubHeader>
+
+@{
+    var methods = typeof(HeroIcons).GetMethods(System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
 }
-else {
-<CodeBlock Code=@Resources.Examples_DataGrid />
-}
 
-@code {
-    private class Invoice
+<div class="grid grid-cols-5 gap-4">
+    @foreach (var method in methods)
     {
-        public int Id { get; set; }
-
-        public string Customer { get; set; } = null!;
-
-        public double Amount { get; set; }
-
-        public bool Paid { get; set; }
+        var markupString = (MarkupString)method.Invoke(null, new object[] { "block", "w-5 h-5" });
+        <DemoPanel>
+            <div class="flex items-center justify-center flex-col">
+                @(markupString)
+                <p class="mt-2 text-xs">@method.Name</p>
+            </div>
+        </DemoPanel>
     }
+</div>
 
-    private NavItem? _selectedExampleNavItem;
-    private IEnumerable<NavItem> _exampleNavItems = new[]
-    {
-        new NavItem("Demo"),
-        new NavItem("Code")
-    };
+<SubHeader>All Icons - Solid</SubHeader>
 
-    private IEnumerable<Invoice> _invoices = Enumerable.Empty<Invoice>();
-
-    private IEnumerable<Column<Invoice>> _invoiceColumns = new[]
-    {
-        new Column<Invoice> { Title = "Id", Field = m => m.Id },
-        new Column<Invoice> { Title = "Customer", Field = m => m.Customer },
-        new Column<Invoice> { Title = "Amount", Field = m => m.Amount, Format = "C" },
-        new Column<Invoice> { Title = "Paid", Field = m => m.Paid },
-    };
-
-    protected override void OnInitialized()
-    {
-        for (var i = 0; i < 25; i++)
-        {
-            _invoices = _invoices.Append(new Invoice
-                {
-                    Id = i,
-                    Customer = "Customer " + i,
-                    Amount = i * 100,
-                    Paid = i % 2 == 0
-                });
-        }
-    }
+@{
+    var solidMethods = typeof(HeroIconsSolid).GetMethods(System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
 }
+
+<div class="grid grid-cols-5 gap-4">
+    @foreach (var method in solidMethods)
+    {
+        var markupString = (MarkupString)method.Invoke(null, new object[] { "block", "w-5 h-5" });
+        <DemoPanel>
+            <div class="flex items-center justify-center flex-col">
+                @(markupString)
+                <p class="mt-2 text-xs">@method.Name</p>
+            </div>
+        </DemoPanel>
+    }
+</div>
+

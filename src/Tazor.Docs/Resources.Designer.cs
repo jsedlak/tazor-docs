@@ -117,6 +117,15 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to @HeroIcons.ArchiveBox(&quot;block&quot;, &quot;w-8 h-8&quot;).
+        /// </summary>
+        public static string Examples_Content_HeroIcons_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Content_HeroIcons_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;DataGrid Items=_invoices Columns=_invoiceColumns /&gt;
         ///
         ///@code {

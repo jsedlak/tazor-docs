@@ -1,6 +1,6 @@
 ﻿@inject NavigationManager Navigation
 <li>
-    <a class=@($"text-sm hover:text-white {GetActiveClass()}") href="@Href">@Title</a>
+    <a class=@($"text-sm dark:hover:text-white hover:text-black {GetActiveClass()}") href="@Href">@Title</a>
 </li>
 
 @code {
@@ -12,13 +12,12 @@
 
     private string GetActiveClass()
     {
-        return Navigation.Uri.Contains(Href) ? "text-white underline" : "text-gray-300";
+        return Navigation.Uri.Contains(Href) ? "text-black dark:text-white underline" : "text-gray-500 dark:text-gray-300";
     }
 
     protected override void OnInitialized()
     {
         Navigation.LocationChanged += (sender, args) => StateHasChanged();
         base.OnInitialized();
-
     }
 }
