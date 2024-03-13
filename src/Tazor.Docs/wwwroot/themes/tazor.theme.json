@@ -53,7 +53,7 @@
     "content": "",
     "footer": "mt-3 flex justify-end items-center gap-4"
   },
-  "table": {
+  "dataGrid": {
     "wrapper": "min-w-full rounded bg-gray-50 dark:bg-gray-800 overflow-x-auto",
     "tableElement": "min-w-full",
     "toolbar": "p-3 flex justify-between items-center",
