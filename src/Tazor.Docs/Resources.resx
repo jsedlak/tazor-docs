@@ -127,8 +127,14 @@
   <data name="Examples_Buttons" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Buttons.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="Examples_Content_CodeBlock_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Content_CodeBlock_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="Examples_Content_HeroIcons_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Content_HeroIcons_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Examples_Content_Spinner_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Content_Spinner_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="Examples_DataGrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_DataGrid.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
@@ -148,6 +154,9 @@
   <data name="Examples_Layout_Accordion_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Layout_Accordion_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="Examples_Layout_Overlay_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Layout_Overlay_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="Examples_Navigation_Breadcrumb_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Navigation_Breadcrumb_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
@@ -162,5 +171,14 @@
   </data>
   <data name="Examples_Switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Switch.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Examples_Utilities_BreakpointIndicator_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Utilities_BreakpointIndicator_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Examples_Utilities_BreakpointIndicator_CustomClass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Utilities_BreakpointIndicator_CustomClass.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Examples_Utilities_BreakpointIndicator_Interop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Utilities_BreakpointIndicator_Interop.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

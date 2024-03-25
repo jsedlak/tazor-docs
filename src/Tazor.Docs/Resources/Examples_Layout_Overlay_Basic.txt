@@ -1,0 +1,10 @@
+<Button Clicked=@(() => { _isVisible = true; StateHasChanged(); })>Open Overlay</Button>
+
+<Overlay IsVisible=@_isVisible ContentClass="flex justify-center items-center h-full w-full">
+    <Button Clicked=@(() => { _isVisible = false; StateHasChanged(); })>
+        Close Overlay
+    </Button>
+</Overlay>
+@code {
+    private bool _isVisible = false;
+}

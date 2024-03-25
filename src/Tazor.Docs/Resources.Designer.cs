@@ -117,11 +117,29 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;CodeBlock Code=&quot;This is some code!&quot; /&gt;.
+        /// </summary>
+        public static string Examples_Content_CodeBlock_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Content_CodeBlock_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to @HeroIcons.ArchiveBox(&quot;block&quot;, &quot;w-8 h-8&quot;).
         /// </summary>
         public static string Examples_Content_HeroIcons_Basic {
             get {
                 return ResourceManager.GetString("Examples_Content_HeroIcons_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Spinner /&gt;.
+        /// </summary>
+        public static string Examples_Content_Spinner_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Content_Spinner_Basic", resourceCulture);
             }
         }
         
@@ -259,6 +277,24 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;Button Clicked=@(() =&gt; { _isVisible = true; StateHasChanged(); })&gt;Open Overlay&lt;/Button&gt;
+        ///
+        ///&lt;Overlay IsVisible=@_isVisible ContentClass=&quot;flex justify-center items-center h-full w-full&quot;&gt;
+        ///    &lt;Button Clicked=@(() =&gt; { _isVisible = false; StateHasChanged(); })&gt;
+        ///        Close Overlay
+        ///    &lt;/Button&gt;
+        ///&lt;/Overlay&gt;
+        ///@code {
+        ///    private bool _isVisible = false;
+        ///}.
+        /// </summary>
+        public static string Examples_Layout_Overlay_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Layout_Overlay_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;Breadcrumb Items=&quot;_breadcrumb&quot; /&gt;
         ///
         ///@code {
@@ -344,6 +380,45 @@ namespace Tazor.Docs {
         public static string Examples_Switch {
             get {
                 return ResourceManager.GetString("Examples_Switch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;BreakpointIndicator /&gt;.
+        /// </summary>
+        public static string Examples_Utilities_BreakpointIndicator_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Utilities_BreakpointIndicator_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;BreakpointIndicator Class=&quot;px-4 py-3 rounded bg-gray-200 dark:bg-gray-800&quot; /&gt;.
+        /// </summary>
+        public static string Examples_Utilities_BreakpointIndicator_CustomClass {
+            get {
+                return ResourceManager.GetString("Examples_Utilities_BreakpointIndicator_CustomClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @inject BreakpointInterop BreakpointInterop
+        ///@code {
+        ///    protected override async Task OnInitializedAsync()
+        ///    {
+        ///        BreakpointInterop.BreakpointChanged += (s, args) =&gt;
+        ///        {
+        ///            /* Handle breakpoint change */
+        ///        };
+        ///
+        ///        // only need to call this once
+        ///        await BreakpointInterop.Initialize();
+        ///    }
+        ///}.
+        /// </summary>
+        public static string Examples_Utilities_BreakpointIndicator_Interop {
+            get {
+                return ResourceManager.GetString("Examples_Utilities_BreakpointIndicator_Interop", resourceCulture);
             }
         }
     }

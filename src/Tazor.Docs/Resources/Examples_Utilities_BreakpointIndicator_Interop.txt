@@ -1,0 +1,13 @@
+@inject BreakpointInterop BreakpointInterop
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        BreakpointInterop.BreakpointChanged += (s, args) =>
+        {
+            /* Handle breakpoint change */
+        };
+
+        // only need to call this once
+        await BreakpointInterop.Initialize();
+    }
+}

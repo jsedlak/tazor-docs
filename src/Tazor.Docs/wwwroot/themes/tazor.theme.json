@@ -22,7 +22,13 @@
     "badgeInfo": "bg-blue-600 border-blue-800 text-white",
     "badgeWarning": "bg-yellow-600 border-yellow-800 text-white",
     "badgeSuccess": "bg-green-600 border-green-800 text-white",
-    "badgeError": "bg-red-600 border-red-800 text-white"
+    "badgeError": "bg-red-600 border-red-800 text-white",
+    "spinner": {
+      "wrapper": "flex items-center",
+      "spinnerDiv": "inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white",
+      "spinnerIcon": "",
+      "text": ""
+    }
   },
   "data": {
     "treeView": {
@@ -154,6 +160,10 @@
     }
   },
   "layout": {
+    "overlay": {
+      "wrapper": "fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full",
+      "content": ""
+    },
     "accordion": {
       "container": "",
       "foldContainer": "border wborder-gray-400 dark:border-indigo-800",

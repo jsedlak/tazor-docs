@@ -2,59 +2,18 @@
 
 <PageTitle>Breakpoint Indicator - Tazor Docs</PageTitle>
 
-<PageHead Title="Breakpoint Indicator Switcher" />
+<PageHead Title="Breakpoint Indicator" />
 
-<p class="leading-loose mb-4">The DataGrid is a Blazor component designed for presenting tabular data in a web application. It offers built-in features for paging and sorting data, enhancing the user experience and making it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view different sections of data, and they can also arrange the data in ascending or descending order based on specific columns for better organization and analysis. This component simplifies the process of creating dynamic, interactive tables in Blazor web applications, providing a convenient way to display and manipulate data.</p>
+<p>The BreakpointIndicator is a simple component that displays the current breakpoint to aid in knowing when a breakpoint is hit.</p>
 
-<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
-@if (_selectedExampleNavItem?.Key == "demo")
-{
-    <DarkModeSwitch />
-}
-else {
-<CodeBlock Code=@Resources.Examples_DataGrid />
-}
+<SubHeader>Basic Usage</SubHeader>
+<BreakpointIndicator />
+<CodeBlock Code=@Resources.Examples_Utilities_BreakpointIndicator_Basic/>
 
-@code {
-    private class Invoice
-    {
-        public int Id { get; set; }
+<SubHeader>Custom Classes</SubHeader>
+<BreakpointIndicator Class="px-4 py-3 rounded bg-gray-200 dark:bg-gray-800" />
+<CodeBlock Code=@Resources.Examples_Utilities_BreakpointIndicator_CustomClass />
 
-        public string Customer { get; set; } = null!;
-
-        public double Amount { get; set; }
-
-        public bool Paid { get; set; }
-    }
-
-    private NavItem? _selectedExampleNavItem;
-    private IEnumerable<NavItem> _exampleNavItems = new[]
-    {
-        new NavItem("Demo"),
-        new NavItem("Code")
-    };
-
-    private IEnumerable<Invoice> _invoices = Enumerable.Empty<Invoice>();
-
-    private IEnumerable<Column<Invoice>> _invoiceColumns = new[]
-    {
-        new Column<Invoice> { Title = "Id", Field = m => m.Id },
-        new Column<Invoice> { Title = "Customer", Field = m => m.Customer },
-        new Column<Invoice> { Title = "Amount", Field = m => m.Amount, Format = "C" },
-        new Column<Invoice> { Title = "Paid", Field = m => m.Paid },
-    };
-
-    protected override void OnInitialized()
-    {
-        for (var i = 0; i < 25; i++)
-        {
-            _invoices = _invoices.Append(new Invoice
-                {
-                    Id = i,
-                    Customer = "Customer " + i,
-                    Amount = i * 100,
-                    Paid = i % 2 == 0
-                });
-        }
-    }
-}
+<SubHeader>Interop</SubHeader>
+<p>The BreakpointIndicator component relies on an injected JS interop service to know when breakpoints change. You can rely on this to fundamentally alter the component tree of your application based on the breakpoint. For instance, you may want to swap a DataGrid for a ListView for smaller screen widths.</p>
+<CodeBlock Code=@Resources.Examples_Utilities_BreakpointIndicator_Interop />
