@@ -1,21 +1,3 @@
-﻿@page "/data/listview"
-@using Tazor.Components.Forms
-
-<PageTitle>ListView - Tazor Docs</PageTitle>
-
-<PageHead Title="ListView" />
-
-<SubHeader>Basic Usage</SubHeader>
-<p>Supplying the ListView component with an array of strings (or objects) will output a list of those strings (calling ToString on objects).</p>
-
-<ListView Items=@StringItems />
-
-<CodeBlock Code=@Resources.Examples_Data_ListView_Basic />
-
-<SubHeader>Templated Lists</SubHeader>
-
-<p>It is also possible to supply a template to the ListView to provide custom rendering for items.</p>
-
 <ListView Items=@People>
     <ItemTemplate>
         <div class="flex justify-between items-center w-full">
@@ -32,17 +14,7 @@
         </div>
     </ItemTemplate>
 </ListView>
-
-<CodeBlock Code=@Resources.Examples_Data_ListView_Templated />
 @code {
-    private IEnumerable<string> StringItems = new string[] {
-        "Item 1",
-        "Item 2",
-        "Item 3",
-        "Item 4",
-        "Item 5"
-    };
-
     private static Random random = new Random();
 
     private IEnumerable<Person> People = Enumerable.Empty<Person>();

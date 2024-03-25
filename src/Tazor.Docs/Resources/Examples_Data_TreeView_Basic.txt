@@ -1,16 +1,3 @@
-﻿@page "/data/treeview" 
-@using Tazor.Components.Forms
-
-<PageTitle>TreeView - Tazor Docs</PageTitle>
-
-<PageHead Title="TreeView" />
-
-<p>The TreeView component supports viewing data typically stored in a hierarchical fashion.</p>
-
-<SubHeader>Basic Usage</SubHeader>
-
-<p class="mb-3">The TreeView component relies on two primary properties: Items and RequestTree. While it is possible to supply the entire tree of items using only the Tree property, it is also possible to dynamically build the tree by responding to RequestTree calls.</p>
-
 <TreeView Items="@Items" RequestTree="@RequestTree" />
 @code {
     protected IEnumerable<ITreeItem> Items { get; set; } = Enumerable.Empty<ITreeItem>();
@@ -48,5 +35,3 @@
         );
     }
 }
-
-<CodeBlock Code=@Resources.Examples_Data_TreeView_Basic />

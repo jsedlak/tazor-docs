@@ -126,6 +126,66 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;ListView Items=@StringItems /&gt;
+        ///@code {
+        ///    private IEnumerable&lt;string&gt; StringItems = new string[] {
+        ///        &quot;Item 1&quot;,
+        ///        &quot;Item 2&quot;,
+        ///        &quot;Item 3&quot;,
+        ///        &quot;Item 4&quot;,
+        ///        &quot;Item 5&quot;
+        ///    };
+        ///}.
+        /// </summary>
+        public static string Examples_Data_ListView_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Data_ListView_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ListView Items=@People&gt;
+        ///    &lt;ItemTemplate&gt;
+        ///        &lt;div class=&quot;flex justify-between items-center w-full&quot;&gt;
+        ///            &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+        ///                &lt;img src=@context.AvatarUrl class=&quot;w-12 h-12 rounded-full&quot; /&gt;
+        ///                &lt;div&gt;
+        ///                    &lt;span class=&quot;font-semibold&quot;&gt;@context.Name&lt;/span&gt;
+        ///                    &lt;span class=&quot;text-sm opacity-50&quot;&gt;@context.Title&lt;/span&gt;
+        ///                &lt;/div&gt;
+        ///            &lt;/div&gt;
+        ///            &lt;div&gt;
+        ///                &lt;a href=&quot;#&quot; class=&quot;cursor-pointer&quot;&gt; [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_Data_ListView_Templated {
+            get {
+                return ResourceManager.GetString("Examples_Data_ListView_Templated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;TreeView Items=&quot;@Items&quot; RequestTree=&quot;@RequestTree&quot; /&gt;
+        ///@code {
+        ///    protected IEnumerable&lt;ITreeItem&gt; Items { get; set; } = Enumerable.Empty&lt;ITreeItem&gt;();
+        ///
+        ///    protected override void OnInitialized()
+        ///    {
+        ///        base.OnInitialized();
+        ///
+        ///        Items = new ITreeItem[]
+        ///        {
+        ///            new TreeItem{ Title = $&quot;Item 1&quot;, Icon = HeroIcons.Folder() },
+        ///            new TreeItem{ Title = $&quot;Item 2&quot;, Icon = HeroIcons.Folder() },
+        ///            new TreeItem{ Title = $&quot;Item 3&quot;, Icon = HeroIcons.Folder() },
+        ///       [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_Data_TreeView_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Data_TreeView_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;DataGrid Items=_invoices Columns=_invoiceColumns /&gt;
         ///
         ///@code {
@@ -174,11 +234,23 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;Accordion&gt;
+        ///   Looks up a localized string similar to &lt;h3 class=&quot;font-semibold mb-2 mt-4&quot;&gt;Options&lt;/h3&gt;
+        ///&lt;div class=&quot;flex items-center gap-4 mb-4&quot;&gt;
+        ///    &lt;p&gt;Allow Multi Open&lt;/p&gt;
+        ///    &lt;Switch @bind-IsChecked=_allowMultiOpen /&gt;
+        ///&lt;/div&gt;
+        ///
+        ///&lt;Accordion MultiOpen=@_allowMultiOpen&gt;
         ///    &lt;AccordionFold&gt;
         ///        &lt;Header&gt;Accordion Fold 1&lt;/Header&gt;
         ///        &lt;Content&gt;
-        ///            &lt;p&gt;Praesent egestas molestie ligula, sed imperdiet urna vehicula nec. Phasellus dapibus auctor lacus, non venenatis augue egestas eget. Integer viverra risus libero, a consectetur velit ultricies varius. Integer in bibendum ligula. Praesent interdum nisl felis, et mollis justo pretium sit amet. Aenean quis nibh porta, tincidunt nunc non, blandit velit. Donec mollis, nunc nec blandit porttitor, nunc ex  [rest of string was truncated]&quot;;.
+        ///            &lt;p&gt;Praesent egestas molestie ligula, ...&lt;/p&gt;
+        ///        &lt;/Content&gt;
+        ///    &lt;/AccordionFold&gt;
+        ///    &lt;AccordionFold&gt;
+        ///        &lt;Header&gt;Accordion Fold 2&lt;/Header&gt;
+        ///        &lt;Content&gt;
+        ///            &lt;p&gt;Praesent egestas mol [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_Layout_Accordion_Basic {
             get {

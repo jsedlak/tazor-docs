@@ -22,10 +22,27 @@
     "badgeInfo": "bg-blue-600 border-blue-800 text-white",
     "badgeWarning": "bg-yellow-600 border-yellow-800 text-white",
     "badgeSuccess": "bg-green-600 border-green-800 text-white",
-    "badgeError": "bg-red-600 border-red-800 text-white",
-    "revealWrapper": "",
-    "revealHeader": "bg-indigo-600 text-white px-3 py-2 rounded cursor-pointer flex justify-between items-center",
-    "revealContent": "mt-2"
+    "badgeError": "bg-red-600 border-red-800 text-white"
+  },
+  "data": {
+    "treeView": {
+      "wrapper": "overflow-x-auto",
+      "tree": "",
+      "treeItem": "whitespace-nowrap ",
+      "treeItemSelected": "whitespace-nowrap",
+      "treeItemContentWrapper": "flex items-center border rounded border-transparent",
+      "treeItemSelectedContentWrapper": "flex items-center border rounded border-blue-800 bg-blue-100 rounded",
+      "treeItemAnchor": "cursor-pointer hover:bg-blue-100 px-2 py-0.5 flex-grow flex items-center gap-1",
+      "treeItemSelectedAnchor": "cursor-pointer hover:bg-blue-100 px-2 py-0.5 flex-grow flex items-center gap-1",
+      "treeItemSubTree": "ml-3",
+      "treeItemExpandAnchor": "cursor-pointer",
+      "treeItemExpandIcon": "w-4 h-4"
+    },
+    "listView": {
+      "wrapper": "mt-3 mb-3 overflow-hidden bg-white shadow-sm ring-1 ring-gray-50 dark:ring-gray-800 rounded dark:bg-gray-700",
+      "list": "list-none divide-y divide-gray-100 dark:divide-gray-900",
+      "listItem": "relative flex items-center px-4 py-4 space-x-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
+    }
   },
   "button": {
     "global": "text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap",
