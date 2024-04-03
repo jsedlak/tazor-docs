@@ -31,7 +31,7 @@
     "codeBlock": {
       "wrapper": "bg-gray-100 dark:bg-gray-900 rounded my-3 text-sm shadow",
       "header": "bg-indigo-400 dark:bg-indigo-800 text-white text-sm px-3 py-2 font-mono flex justify-between items-center",
-      "pre": "p-3 text-sm"
+      "pre": "p-3 text-sm overflow-x-auto"
     }
   },
   "data": {
