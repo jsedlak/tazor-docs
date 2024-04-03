@@ -61,6 +61,61 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to // For WASM
+        ///await builder.AddTazorAsync();
+        ///
+        ///// For Server-Side
+        ///// Coming soon..
+        /// </summary>
+        public static string Documentation_Install_AddTazorAsync {
+            get {
+                return ResourceManager.GetString("Documentation_Install_AddTazorAsync", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @inherits LayoutComponentBase
+        ///@inject IThemeManager ThemeManager
+        ///&lt;CascadingValue TValue=&quot;ITheme&quot; Value=&quot;ThemeManager.Current&quot; Name=&quot;Theme&quot;&gt;
+        ///    &lt;div class=&quot;w-full&quot;&gt;
+        ///        &lt;Header /&gt;
+        ///        &lt;div class=&quot;mx-auto flex w-full items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8&quot;&gt;
+        ///            &lt;aside class=&quot;sticky top-8 flex-shrink-0 lg:block&quot;&gt;
+        ///                &lt;Sidebar /&gt;
+        ///            &lt;/aside&gt;
+        ///            &lt;main class=&quot;flex-1&quot;&gt;
+        ///                @Body
+        ///            &lt;/main&gt;
+        ///        &lt;/div&gt;
+        ///        &lt;Footer /&gt;
+        ///    &lt;/div&gt;
+        ///&lt;/Ca [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Documentation_Install_CascadingTheme {
+            get {
+                return ResourceManager.GetString("Documentation_Install_CascadingTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;script src=&quot;_content/Tazor.Components/tazor.js&quot;&gt;&lt;/script&gt;.
+        /// </summary>
+        public static string Documentation_Install_JavascriptFile {
+            get {
+                return ResourceManager.GetString("Documentation_Install_JavascriptFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .\tailwindcss.exe -i ./Styles/app.css -o ./wwwroot/css/app.css --watch.
+        /// </summary>
+        public static string Documentation_TailwindCli_PowerShell {
+            get {
+                return ResourceManager.GetString("Documentation_TailwindCli_PowerShell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;Alert Type=@AlertType.Info Title=&quot;Test Info Alert&quot;&gt;
         ///    &lt;Content&gt;
         ///        &lt;p class=&quot;leading&quot;&gt;This is an info alert!&lt;/p&gt;
@@ -419,6 +474,15 @@ namespace Tazor.Docs {
         public static string Examples_Utilities_BreakpointIndicator_Interop {
             get {
                 return ResourceManager.GetString("Examples_Utilities_BreakpointIndicator_Interop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ThemeSwitcher /&gt;.
+        /// </summary>
+        public static string Examples_Utilities_ThemeSwitcher_Basic {
+            get {
+                return ResourceManager.GetString("Examples_Utilities_ThemeSwitcher_Basic", resourceCulture);
             }
         }
     }

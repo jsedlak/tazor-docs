@@ -30,7 +30,7 @@
     },
     "codeBlock": {
       "wrapper": "bg-gray-100 dark:bg-gray-900 rounded my-3 text-sm shadow",
-      "header": "bg-indigo-400 dark:bg-indigo-800 text-white text-sm px-3 py-2 font-mono flex justify-between items-center",
+      "header": "bg-red-400 dark:bg-red-800 text-white text-sm px-3 py-2 font-mono flex justify-between items-center",
       "pre": "p-3 text-sm"
     }
   },
@@ -57,17 +57,17 @@
   "button": {
     "global": "text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap",
     "disabled": "opacity-50 cursor-not-allowed",
-    "default": "bg-indigo-500 hover:bg-indigo-600 text-white",
-    "defaultOutline": "bg-transparent hover:bg-indigo-500 text-indigo-500 dark:text-indigo-100 hover:text-white border border-indigo-500",
-    "primary": "bg-indigo-500 hover:bg-indigo-600 text-white",
-    "primaryOutline": "bg-transparent hover:bg-indigo-500 text-indigo-500 dark:text-indigo-100 hover:text-white border border-indigo-500",
+    "default": "bg-red-500 hover:bg-red-600 text-white",
+    "defaultOutline": "bg-transparent hover:bg-red-500 text-red-500 dark:text-red-100 hover:text-white border border-red-500",
+    "primary": "bg-red-500 hover:bg-red-600 text-white",
+    "primaryOutline": "bg-transparent hover:bg-red-500 text-red-500 dark:text-red-100 hover:text-white border border-red-500",
     "info": "bg-blue-500 hover:bg-blue-600 text-white",
     "infoOutline": "bg-transparent hover:bg-blue-500 text-blue-500 dark:text-blue-100 hover:text-white border border-blue-500",
     "warning": "bg-yellow-500 hover:bg-yellow-600 text-white",
     "warningOutline": "bg-transparent hover:bg-yellow-600 text-yellow-500 dark:text-yellow-200 hover:text-white border border-yellow-500",
     "error": "bg-red-500 hover:bg-red-600 text-white",
     "errorOutline": "bg-transparent hover:bg-red-600 text-red-500 dark:text-red-100 hover:text-white border border-red-500",
-    "link": "text-indigo-500 dark:text-indigo-100 underline",
+    "link": "text-red-500 dark:text-red-100 underline",
     "success": "bg-green-500 hover:bg-green-600 text-white",
     "successOutline": "bg-transparent hover:bg-green-600 text-green-500 dark:text-green-200 hover:text-white border border-green-500"
   },
@@ -96,13 +96,13 @@
     "nav": "flex items-center gap-2",
     "previousButton": "py-2 px-3 rounded text-sm cursor-pointer",
     "nextButton": "py-2 px-3 rounded text-sm cursor-pointer",
-    "buttonActive": "py-2 px-3 rounded text-sm bg-indigo-500 text-white cursor-pointer",
+    "buttonActive": "py-2 px-3 rounded text-sm bg-red-500 text-white cursor-pointer",
     "button": "py-2 px-3 rounded text-sm cursor-pointer",
     "nextPreviousText": "sr-only"
   },
   "tabNav": {
     "wrapper": "flex items-center gap-2 my-2 rounded bg-gray-100 border-t-2 border-gray-100 dark:bg-gray-800 dark:border-gray-800",
-    "selectedItem": "border-b-2 border-indigo-500 cursor-pointer text-sm",
+    "selectedItem": "border-b-2 border-red-500 cursor-pointer text-sm",
     "item": "cursor-pointer border-b-2 border-gray-100 text-sm dark:border-gray-800",
     "selectedLink": "block py-2 px-4",
     "link": "block py-2 px-4"
@@ -150,8 +150,8 @@
   },
   "switch": {
     "wrapper": "",
-    "track": "bg-gray-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-",
-    "trackSelected": "bg-indigo-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-",
+    "track": "bg-gray-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-",
+    "trackSelected": "bg-red-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-",
     "knob": "translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out",
     "knobSelected": "translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
   },
@@ -185,10 +185,10 @@
     },
     "accordion": {
       "container": "",
-      "foldContainer": "border wborder-gray-400 dark:border-indigo-800",
-      "foldContainerSelected": "border border-gray-300 dark:border-indigo-700",
-      "foldHeader": "font-semibold bg-gray-400 dark:bg-indigo-800 p-3 cursor-pointer",
-      "foldHeaderSelected": "font-semibold bg-gray-300 dark:bg-indigo-700 p-3 cursor-pointer",
+      "foldContainer": "border wborder-gray-400 dark:border-red-800",
+      "foldContainerSelected": "border border-gray-300 dark:border-red-700",
+      "foldHeader": "font-semibold bg-gray-400 dark:bg-red-800 p-3 cursor-pointer",
+      "foldHeaderSelected": "font-semibold bg-gray-300 dark:bg-red-700 p-3 cursor-pointer",
       "foldContent": "p-3"
     }
   }

@@ -1,0 +1,5 @@
+// For WASM
+await builder.AddTazorAsync();
+
+// For Server-Side
+// Coming soon.
