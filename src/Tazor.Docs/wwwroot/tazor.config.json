@@ -4,7 +4,11 @@
       {
         "name": "tazor-default",
         "path": "themes/tazor.theme.json",
-        "isDefault":  true
+        "isDefault": true
+      },
+      {
+        "name": "mars",
+        "path": "themes/mars.theme.json"
       }
     ]
   }
