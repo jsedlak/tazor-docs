@@ -89,7 +89,7 @@ namespace Tazor.Docs {
         ///        &lt;/div&gt;
         ///        &lt;Footer /&gt;
         ///    &lt;/div&gt;
-        ///&lt;/Ca [rest of string was truncated]&quot;;.
+        ///&lt;/Cas [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Documentation_Install_CascadingTheme {
             get {
@@ -186,6 +186,26 @@ namespace Tazor.Docs {
         public static string Examples_Content_HeroIcons_Basic {
             get {
                 return ResourceManager.GetString("Examples_Content_HeroIcons_Basic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;
+        ///    &lt;div&gt;
+        ///        &lt;p&gt;Click the button to toggle the popover.&lt;/p&gt;
+        ///        &lt;PopoverContainer AllowHover=&quot;false&quot;&gt;
+        ///            &lt;Button 
+        ///                Clicked=@(() =&gt; { _isClickPopoverOpen = !_isClickPopoverOpen; StateHasChanged(); }) 
+        ///                Type=&quot;ButtonType.Primary&quot;&gt;Toggle Popover&lt;/Button&gt;
+        ///            &lt;Popover Title=&quot;Popover Title&quot; @bind-IsOpen=_isClickPopoverOpen&gt;
+        ///                This is some content!
+        ///            &lt;/Popover&gt;
+        ///        &lt;/PopoverContainer&gt;
+        ///    &lt;/di [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_Content_Popover_BasicUsage {
+            get {
+                return ResourceManager.GetString("Examples_Content_Popover_BasicUsage", resourceCulture);
             }
         }
         

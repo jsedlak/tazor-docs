@@ -145,6 +145,9 @@
   <data name="Examples_Content_HeroIcons_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Content_HeroIcons_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="Examples_Content_Popover_BasicUsage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Content_Popover_BasicUsage.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="Examples_Content_Spinner_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Content_Spinner_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

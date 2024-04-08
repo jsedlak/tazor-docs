@@ -12,6 +12,7 @@
     "alertError": "bg-red-100 border-red-500 text-red-700 dark:bg-red-700 dark:border-red-900 dark:text-white",
     "alertSuccess": "bg-green-100 border-green-500 text-green-700 dark:bg-green-700 dark:border-green-900 dark:text-white",
     "alertIcon": "mr-2",
+    "lead": "my-2 text-lg leading-loose",
     "section": "mt-2 mb-4",
     "header1": "text-2xl font-semibold mb-2",
     "header2": "text-xl font-semibold mb-2",
@@ -32,6 +33,13 @@
       "wrapper": "bg-gray-100 dark:bg-gray-900 rounded my-3 text-sm shadow",
       "header": "bg-red-400 dark:bg-red-800 text-white text-sm px-3 py-2 font-mono flex justify-between items-center",
       "pre": "p-3 text-sm"
+    },
+    "popover": {
+      "container": "relative inline-block",
+      "wrapper": "hidden",
+      "wrapperOpen": "left-1/2 -translate-x-1/2 transform absolute z-10 w-48 p-4 mt-2 bg-white dark:bg-red-600 rounded-lg shadow-lg",
+      "title": "text-sm font-semibold mb-2",
+      "content": "text-sm"
     }
   },
   "data": {
@@ -55,7 +63,7 @@
     }
   },
   "button": {
-    "global": "text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap",
+    "global": "inline-block text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap",
     "disabled": "opacity-50 cursor-not-allowed",
     "default": "bg-red-500 hover:bg-red-600 text-white",
     "defaultOutline": "bg-transparent hover:bg-red-500 text-red-500 dark:text-red-100 hover:text-white border border-red-500",
@@ -185,10 +193,10 @@
     },
     "accordion": {
       "container": "",
-      "foldContainer": "border wborder-gray-400 dark:border-red-800",
-      "foldContainerSelected": "border border-gray-300 dark:border-red-700",
-      "foldHeader": "font-semibold bg-gray-400 dark:bg-red-800 p-3 cursor-pointer",
-      "foldHeaderSelected": "font-semibold bg-gray-300 dark:bg-red-700 p-3 cursor-pointer",
+      "foldContainer": "border border-red-400 dark:border-red-800",
+      "foldContainerSelected": "border border-red-300 dark:border-red-700",
+      "foldHeader": "font-semibold bg-red-400 dark:bg-red-800 p-3 cursor-pointer",
+      "foldHeaderSelected": "font-semibold bg-red-300 dark:bg-red-700 p-3 cursor-pointer",
       "foldContent": "p-3"
     }
   }
