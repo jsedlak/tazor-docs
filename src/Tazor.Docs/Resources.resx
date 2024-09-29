@@ -133,6 +133,15 @@
   <data name="Examples_Alerts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Alerts.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="Examples_App_AvatarProvider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_App_AvatarProvider.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Examples_App_AvatarSizing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_App_AvatarSizing.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Examples_App_AvatarUrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_App_AvatarUrl.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="Examples_Badges" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Badges.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

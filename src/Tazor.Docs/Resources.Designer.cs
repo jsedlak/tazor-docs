@@ -143,6 +143,41 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string Examples_App_AvatarProvider {
+            get {
+                return ResourceManager.GetString("Examples_App_AvatarProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Avatar Name=&quot;John Doe&quot; Size=&quot;Sizing.ExtraSmall&quot; /&gt;
+        ///
+        ///&lt;Avatar Name=&quot;John Doe&quot; Size=&quot;Sizing.Small&quot; /&gt;
+        ///
+        ///&lt;Avatar Name=&quot;John Doe&quot; Size=&quot;Sizing.Medium&quot; /&gt;
+        ///
+        ///&lt;Avatar Name=&quot;John Doe&quot; Size=&quot;Sizing.Large&quot; /&gt;
+        ///
+        ///&lt;Avatar Name=&quot;John Doe&quot; Size=&quot;Sizing.Custom&quot; CustomSizeClass=&quot;w-8 h-8&quot; /&gt;.
+        /// </summary>
+        public static string Examples_App_AvatarSizing {
+            get {
+                return ResourceManager.GetString("Examples_App_AvatarSizing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Avatar Url=&quot;https://gravatar.com/avatar/HASH&quot; /&gt;.
+        /// </summary>
+        public static string Examples_App_AvatarUrl {
+            get {
+                return ResourceManager.GetString("Examples_App_AvatarUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;div class=&quot;gap-4 flex&quot;&gt;
         ///    &lt;Badge Type=&quot;BadgeType.Info&quot;&gt;Info&lt;/Badge&gt;
         ///    &lt;Badge Type=&quot;BadgeType.Success&quot;&gt;Success&lt;/Badge&gt;

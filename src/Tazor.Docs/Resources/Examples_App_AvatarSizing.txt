@@ -1,0 +1,9 @@
+<Avatar Name="John Doe" Size="Sizing.ExtraSmall" />
+
+<Avatar Name="John Doe" Size="Sizing.Small" />
+
+<Avatar Name="John Doe" Size="Sizing.Medium" />
+
+<Avatar Name="John Doe" Size="Sizing.Large" />
+
+<Avatar Name="John Doe" Size="Sizing.Custom" CustomSizeClass="w-8 h-8" />

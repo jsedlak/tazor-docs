@@ -1,0 +1,1 @@
+<Avatar Url="https://gravatar.com/avatar/HASH" />
