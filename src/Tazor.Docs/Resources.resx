@@ -175,6 +175,12 @@
   <data name="Examples_Flyout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Flyout.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="Examples_Forms_WizardProgress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Forms_WizardProgress.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Examples_Forms_WizardProgressStatus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Examples_Forms_WizardProgressStatus.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="Examples_Layout_Accordion_Basic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Examples_Layout_Accordion_Basic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

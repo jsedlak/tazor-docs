@@ -143,7 +143,19 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to &lt;Avatar Identifier=&quot;john.doe@aol.com&quot; /&gt;
+        ///
+        ///// In Program.cs, register your provider
+        ///builder.Services.AddScoped&lt;IAvatarProvider, GravatarAvatarProvider&gt;();
+        ///
+        ///// Example built-in provider
+        ///public class GravatarAvatarProvider : IAvatarProvider
+        ///{
+        ///    public Task&lt;string?&gt; GetAvatarImageUrl(string identifier)
+        ///    {
+        ///        var hasher = System.Security.Cryptography.SHA256.Create();
+        ///        var hash = hasher.ComputeHash(Encoding.UTF8.GetBytes(identifier));
+        ///        return Task.FromResult&lt;string?&gt;($&quot;https:// [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_App_AvatarProvider {
             get {
@@ -358,6 +370,42 @@ namespace Tazor.Docs {
         public static string Examples_Flyout {
             get {
                 return ResourceManager.GetString("Examples_Flyout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;WizardProgress Sections=&quot;_sections&quot; ShowTitles=&quot;true&quot; /&gt;
+        ///
+        ///@code {
+        ///    private WizardSection[] _sections = new[]
+        ///    {
+        ///        new WizardSection { Title = &quot;Section 1&quot;, Progress = 100 },
+        ///        new WizardSection { Title = &quot;Section 2&quot;, Progress = 66 },
+        ///        new WizardSection { Title = &quot;Section 3&quot;, Progress = 0 }
+        ///    };
+        ///}
+        ///.
+        /// </summary>
+        public static string Examples_Forms_WizardProgress {
+            get {
+                return ResourceManager.GetString("Examples_Forms_WizardProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;WizardProgress Sections=&quot;_sectionsWithStatus&quot; ShowTitles=&quot;true&quot; /&gt;
+        ///
+        ///@code {
+        ///    private WizardSection[] _sectionsWithStatus = new[]
+        ///    {
+        ///        new WizardSection { Title = &quot;Section 1&quot;, Progress = 100, Status = ValidationSeverity.Valid },
+        ///        new WizardSection { Title = &quot;Section 2&quot;, Progress = 66, Status = ValidationSeverity.Warning },
+        ///        new WizardSection { Title = &quot;Section 3&quot;, Progress = 66, Status = ValidationSeverity.Error },
+        ///        new WizardSection { Title = &quot;Section 4&quot;, Progress = [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_Forms_WizardProgressStatus {
+            get {
+                return ResourceManager.GetString("Examples_Forms_WizardProgressStatus", resourceCulture);
             }
         }
         

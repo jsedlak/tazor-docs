@@ -154,6 +154,17 @@
       "list": "",
       "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
       "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800"
+    },
+    "wizard": {
+      "progressWrapper": "flex items-center gap-2",
+      "progressSectionWrapper": "flex-col gap-2 w-full",
+      "progressSectionTitle": "text-xs opacity-50",
+      "progressBarBackground": "rounded-full h-2 bg-gray-200 dark:bg-gray-700 relative w-full",
+      "progressBar": "rounded-full h-2 absolute left-0 top-0 transition-all duration-300",
+      "progressNotChecked": "bg-indigo-400",
+      "progressValid": "bg-green-500",
+      "progressWarning": "bg-yellow-500",
+      "progressError": "bg-red-500"
     }
   },
   "dropdown": {
