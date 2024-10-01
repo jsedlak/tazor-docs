@@ -28,6 +28,16 @@
       "wrapperSuccess": "bg-green-100 border-green-500 text-green-700 dark:bg-green-700 dark:border-green-900 dark:text-white",
       "emptyMessageContainer": "flex w-full h-full items-center justify-center p-4",
       "emptyMessage": "text-2xl opacity-75"
+    },
+    "statCard": {
+      "card": "bg-gray-100 rounded shadow-md border-gray-400 dark:bg-gray-800 dark:border-gray-600",
+      "header": "mb-3 flex px-6 pt-6 justify-between items-center",
+      "title": "flex-shrink-0 opacity-75 font-semibold flex space-x-2 items-center text-sm",
+      "additionalData": "opacity-75 text-sm",
+      "body": "px-6 pb-6",
+      "statistic": "text-4xl",
+      "footer": "bg-gray-300 dark:bg-gray-900 p-3 rounded-b",
+      "note": ""
     }
   },
   "content": {
@@ -50,7 +60,7 @@
     "header2": "text-xl font-semibold mb-2",
     "header3": "text-lg font-semibold mb-2",
     "header4": "font-semibold mb-2",
-    "badgeGlobal": "inline px-2 py-1 text-xs rounded border",
+    "badgeGlobal": "inline px-2 py-1 text-xs rounded border font-semibold",
     "badgeInfo": "bg-blue-600 border-blue-800 text-white",
     "badgeWarning": "bg-yellow-600 border-yellow-800 text-white",
     "badgeSuccess": "bg-green-600 border-green-800 text-white",

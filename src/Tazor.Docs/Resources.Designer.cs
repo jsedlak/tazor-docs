@@ -116,6 +116,29 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4&quot;&gt;
+        ///    &lt;StatCard&gt;
+        ///        &lt;Title&gt;
+        ///            &lt;div class=&quot;space-x-2&quot;&gt;
+        ///                @HeroIcons.ChartPie(&quot;inline-block&quot;)
+        ///                &lt;span&gt;Total Revenue&lt;/span&gt;
+        ///            &lt;/div&gt;
+        ///        &lt;/Title&gt;
+        ///        &lt;AdditionalData&gt;
+        ///            &lt;div&gt;
+        ///                &lt;Badge Type=&quot;BadgeType.Success&quot;&gt;
+        ///                    @HeroIcons.ArrowUpRight(&quot;inline-block&quot;, &quot;w-4 h-4&quot;)
+        ///                    &lt;span&gt;23%&lt;/span&gt;
+        ///                &lt;/Badge&gt;
+        ///      [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Example_App_StatCard {
+            get {
+                return ResourceManager.GetString("Example_App_StatCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;Alert Type=@AlertType.Info Title=&quot;Test Info Alert&quot;&gt;
         ///    &lt;Content&gt;
         ///        &lt;p class=&quot;leading&quot;&gt;This is an info alert!&lt;/p&gt;
@@ -190,9 +213,23 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;NotificationContainer Inline=&quot;true&quot; /&gt;
+        ///   Looks up a localized string similar to &lt;div class=&quot;flex gap-4 my-3&quot;&gt;
+        ///    &lt;Button Clicked=@OnClickedAdd Type=&quot;ButtonType.SuccessOutline&quot;&gt;Add Notification&lt;/Button&gt;
+        ///    &lt;Button Clicked=@OnClickedAddPermanent Type=&quot;ButtonType.ErrorOutline&quot;&gt;Add Permanent&lt;/Button&gt;
+        ///&lt;/div&gt;
         ///
-        ///&lt;NotificationContainer /&gt;.
+        ///
+        ///&lt;NotificationContainer Inline=&quot;true&quot; /&gt;
+        ///
+        ///&lt;NotificationContainer /&gt;
+        ///
+        ///@code {
+        ///    private void OnClickedAdd()
+        ///    {
+        ///        NotificationProvider.Add(new NotificationItem
+        ///            {
+        ///                Type = NotificationType.Success,
+        ///                Title = &quot;Notificatio [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_App_NotificationContainers {
             get {
