@@ -190,6 +190,32 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;NotificationContainer Inline=&quot;true&quot; /&gt;
+        ///
+        ///&lt;NotificationContainer /&gt;.
+        /// </summary>
+        public static string Examples_App_NotificationContainers {
+            get {
+                return ResourceManager.GetString("Examples_App_NotificationContainers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Notification Type=&quot;NotificationType.Success&quot;&gt;
+        ///    &lt;Icon&gt;
+        ///        @HeroIcons.AcademicCap();
+        ///    &lt;/Icon&gt;
+        ///    &lt;Title&gt;Notification Title&lt;/Title&gt;
+        ///    &lt;Message&gt;This is a notification message.&lt;/Message&gt;
+        ///&lt;/Notification&gt;.
+        /// </summary>
+        public static string Examples_App_NotificationSimple {
+            get {
+                return ResourceManager.GetString("Examples_App_NotificationSimple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;div class=&quot;gap-4 flex&quot;&gt;
         ///    &lt;Badge Type=&quot;BadgeType.Info&quot;&gt;Info&lt;/Badge&gt;
         ///    &lt;Badge Type=&quot;BadgeType.Success&quot;&gt;Success&lt;/Badge&gt;
