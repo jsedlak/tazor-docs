@@ -6,6 +6,7 @@ using Tazor.Components;
 using Tazor.Components.App;
 using Tazor.Themes.HighContrast;
 using Tazor.Themes.VisualStudio;
+using Tazor.Wasm;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<Tazor.Docs.App>("#app");
@@ -22,5 +23,6 @@ builder.Services
     .Build();
 
 var app = builder.Build();
-    
+
+await app.UseTazor();
 await app.RunAsync();

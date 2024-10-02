@@ -3,15 +3,16 @@
 <CascadingValue TValue="ITheme" Value="ThemeManager.Current" Name="Theme">
     <div class="w-full">
         <Header />
-        <div class="mx-auto flex w-full items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
-            <aside class="sticky top-8 flex-shrink-0 lg:block">
+        <div class="mx-auto flex w-full items-start gap-x-4">
+            <aside class="sticky top-0 flex-shrink-0 lg:block bg-indigo-900 px-4 sm:px-6 lg:px-8 py-10 w-1/6">
                 <Sidebar />
             </aside>
-            <main class="flex-1">
+            <main class="flex-1 px-4 sm:px-6 lg:px-8 py-10">
                 @Body
+
+                <Footer />
             </main>
         </div>
-        <Footer />
     </div>
 </CascadingValue>
 @code {
