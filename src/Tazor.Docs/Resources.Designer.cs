@@ -116,6 +116,29 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4&quot;&gt;
+        ///    &lt;StatCard&gt;
+        ///        &lt;Title&gt;
+        ///            &lt;div class=&quot;space-x-2&quot;&gt;
+        ///                @HeroIcons.ChartPie(&quot;inline-block&quot;)
+        ///                &lt;span&gt;Total Revenue&lt;/span&gt;
+        ///            &lt;/div&gt;
+        ///        &lt;/Title&gt;
+        ///        &lt;AdditionalData&gt;
+        ///            &lt;div&gt;
+        ///                &lt;Badge Type=&quot;BadgeType.Success&quot;&gt;
+        ///                    @HeroIcons.ArrowUpRight(&quot;inline-block&quot;, &quot;w-4 h-4&quot;)
+        ///                    &lt;span&gt;23%&lt;/span&gt;
+        ///                &lt;/Badge&gt;
+        ///      [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Example_App_StatCard {
+            get {
+                return ResourceManager.GetString("Example_App_StatCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;Alert Type=@AlertType.Info Title=&quot;Test Info Alert&quot;&gt;
         ///    &lt;Content&gt;
         ///        &lt;p class=&quot;leading&quot;&gt;This is an info alert!&lt;/p&gt;
@@ -143,7 +166,19 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to &lt;Avatar Identifier=&quot;john.doe@aol.com&quot; /&gt;
+        ///
+        ///// In Program.cs, register your provider
+        ///builder.Services.AddScoped&lt;IAvatarProvider, GravatarAvatarProvider&gt;();
+        ///
+        ///// Example built-in provider
+        ///public class GravatarAvatarProvider : IAvatarProvider
+        ///{
+        ///    public Task&lt;string?&gt; GetAvatarImageUrl(string identifier)
+        ///    {
+        ///        var hasher = System.Security.Cryptography.SHA256.Create();
+        ///        var hash = hasher.ComputeHash(Encoding.UTF8.GetBytes(identifier));
+        ///        return Task.FromResult&lt;string?&gt;($&quot;https:// [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_App_AvatarProvider {
             get {
@@ -174,6 +209,46 @@ namespace Tazor.Docs {
         public static string Examples_App_AvatarUrl {
             get {
                 return ResourceManager.GetString("Examples_App_AvatarUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;flex gap-4 my-3&quot;&gt;
+        ///    &lt;Button Clicked=@OnClickedAdd Type=&quot;ButtonType.SuccessOutline&quot;&gt;Add Notification&lt;/Button&gt;
+        ///    &lt;Button Clicked=@OnClickedAddPermanent Type=&quot;ButtonType.ErrorOutline&quot;&gt;Add Permanent&lt;/Button&gt;
+        ///&lt;/div&gt;
+        ///
+        ///
+        ///&lt;NotificationContainer Inline=&quot;true&quot; /&gt;
+        ///
+        ///&lt;NotificationContainer /&gt;
+        ///
+        ///@code {
+        ///    private void OnClickedAdd()
+        ///    {
+        ///        NotificationProvider.Add(new NotificationItem
+        ///            {
+        ///                Type = NotificationType.Success,
+        ///                Title = &quot;Notificatio [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_App_NotificationContainers {
+            get {
+                return ResourceManager.GetString("Examples_App_NotificationContainers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Notification Type=&quot;NotificationType.Success&quot;&gt;
+        ///    &lt;Icon&gt;
+        ///        @HeroIcons.AcademicCap();
+        ///    &lt;/Icon&gt;
+        ///    &lt;Title&gt;Notification Title&lt;/Title&gt;
+        ///    &lt;Message&gt;This is a notification message.&lt;/Message&gt;
+        ///&lt;/Notification&gt;.
+        /// </summary>
+        public static string Examples_App_NotificationSimple {
+            get {
+                return ResourceManager.GetString("Examples_App_NotificationSimple", resourceCulture);
             }
         }
         
@@ -358,6 +433,42 @@ namespace Tazor.Docs {
         public static string Examples_Flyout {
             get {
                 return ResourceManager.GetString("Examples_Flyout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;WizardProgress Sections=&quot;_sections&quot; ShowTitles=&quot;true&quot; /&gt;
+        ///
+        ///@code {
+        ///    private WizardSection[] _sections = new[]
+        ///    {
+        ///        new WizardSection { Title = &quot;Section 1&quot;, Progress = 100 },
+        ///        new WizardSection { Title = &quot;Section 2&quot;, Progress = 66 },
+        ///        new WizardSection { Title = &quot;Section 3&quot;, Progress = 0 }
+        ///    };
+        ///}
+        ///.
+        /// </summary>
+        public static string Examples_Forms_WizardProgress {
+            get {
+                return ResourceManager.GetString("Examples_Forms_WizardProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;WizardProgress Sections=&quot;_sectionsWithStatus&quot; ShowTitles=&quot;true&quot; /&gt;
+        ///
+        ///@code {
+        ///    private WizardSection[] _sectionsWithStatus = new[]
+        ///    {
+        ///        new WizardSection { Title = &quot;Section 1&quot;, Progress = 100, Status = ValidationSeverity.Valid },
+        ///        new WizardSection { Title = &quot;Section 2&quot;, Progress = 66, Status = ValidationSeverity.Warning },
+        ///        new WizardSection { Title = &quot;Section 3&quot;, Progress = 66, Status = ValidationSeverity.Error },
+        ///        new WizardSection { Title = &quot;Section 4&quot;, Progress = [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_Forms_WizardProgressStatus {
+            get {
+                return ResourceManager.GetString("Examples_Forms_WizardProgressStatus", resourceCulture);
             }
         }
         

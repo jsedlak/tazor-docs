@@ -17,9 +17,9 @@
 <p>The Breadcrumb component also allows for a custom delimiter to be supplied. Simply use the <code>DelimiterFragment</code> child component to pass in any valid HTML/Razor syntax. In this case, we're passing an icon from the Hero Icons library.'</p>
 
 <Breadcrumb Items="_breadcrumb">
-    <DelimiterFragment>
+    <DelimiterTemplate>
         @HeroIcons.AcademicCap()
-    </DelimiterFragment>
+    </DelimiterTemplate>
 </Breadcrumb>
 
 <CodeBlock Code=@Resources.Examples_Navigation_Breadcrumb_CustomDelimiter />

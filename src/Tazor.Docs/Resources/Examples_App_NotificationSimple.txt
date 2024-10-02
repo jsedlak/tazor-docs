@@ -1,0 +1,7 @@
+<Notification Type="NotificationType.Success">
+    <Icon>
+        @HeroIcons.AcademicCap();
+    </Icon>
+    <Title>Notification Title</Title>
+    <Message>This is a notification message.</Message>
+</Notification>

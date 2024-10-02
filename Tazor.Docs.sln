@@ -11,6 +11,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Wasm", "tazor\src\Taz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Core", "tazor\src\Tazor.Core\Tazor.Core.csproj", "{B8989AB9-353E-4073-9C91-8F88BC971531}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Core", "0. Core", "{56DA76F4-8C83-46D2-BF01-58F639CCC140}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Components", "1. Components", "{C30EAB31-90F8-4B83-A707-516D70DC7F88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Themes", "2. Themes", "{6159FAEE-8989-45A1-88D3-97A91E910D4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. App", "3. App", "{9462D8C8-E37A-42E4-B0ED-5AD1C4EAA43D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Themes.VisualStudio", "tazor\src\Tazor.Themes.VisualStudio\Tazor.Themes.VisualStudio.csproj", "{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Themes.HighContrast", "tazor\src\Tazor.Themes.HighContrast\Tazor.Themes.HighContrast.csproj", "{84C21997-D920-4D2E-A9F0-327C8402D194}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +45,25 @@ Global
 		{B8989AB9-353E-4073-9C91-8F88BC971531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8989AB9-353E-4073-9C91-8F88BC971531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8989AB9-353E-4073-9C91-8F88BC971531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C21997-D920-4D2E-A9F0-327C8402D194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C21997-D920-4D2E-A9F0-327C8402D194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C21997-D920-4D2E-A9F0-327C8402D194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C21997-D920-4D2E-A9F0-327C8402D194}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{048DD5BC-E2F6-4019-8271-342FF1CC7648} = {9462D8C8-E37A-42E4-B0ED-5AD1C4EAA43D}
+		{B2F6BE57-8A02-4424-85B3-AB801AA3DFD5} = {C30EAB31-90F8-4B83-A707-516D70DC7F88}
+		{F7E6873A-CAB2-4E92-AE07-E411B50A9FF2} = {C30EAB31-90F8-4B83-A707-516D70DC7F88}
+		{B8989AB9-353E-4073-9C91-8F88BC971531} = {56DA76F4-8C83-46D2-BF01-58F639CCC140}
+		{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882} = {6159FAEE-8989-45A1-88D3-97A91E910D4C}
+		{84C21997-D920-4D2E-A9F0-327C8402D194} = {6159FAEE-8989-45A1-88D3-97A91E910D4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C42AE6EA-BA30-4C05-9FB3-1CE5FB2B307C}

@@ -1,0 +1,55 @@
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <StatCard>
+        <Title>
+            <div class="space-x-2">
+                @HeroIcons.ChartPie("inline-block")
+                <span>Total Revenue</span>
+            </div>
+        </Title>
+        <AdditionalData>
+            <div>
+                <Badge Type="BadgeType.Success">
+                    @HeroIcons.ArrowUpRight("inline-block", "w-4 h-4")
+                    <span>23%</span>
+                </Badge>
+            </div>
+        </AdditionalData>
+        <Statistic>
+            $437,892
+        </Statistic>
+    </StatCard>
+
+    <StatCard>
+        <Title>
+            <div class="space-x-2">
+                @HeroIcons.ChartPie("inline-block")
+                <span>Retail Sentiment</span>
+            </div>
+        </Title>
+        <AdditionalData>
+            <div>
+                <Badge Type="BadgeType.Error">
+                    @HeroIcons.ArrowDownRight("inline-block", "w-4 h-4")
+                    <span>3.25%</span>
+                </Badge>
+            </div>
+        </AdditionalData>
+        <Statistic>
+            $123,456
+        </Statistic>
+        <Note>
+            <div class="text-sm">
+                Source: <a href="#">tazor.org</a>
+            </div>
+        </Note>
+    </StatCard>
+
+    <StatCard>
+        <Title>
+            <span>Simple Metric</span>
+        </Title>
+        <Statistic>
+            Hello, World
+        </Statistic>
+    </StatCard>
+</div>

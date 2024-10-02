@@ -21,3 +21,29 @@
         right: 0.75rem;
         top: 0.5rem;
     }
+
+code {
+    display: inline-block;
+    font-family: Hack, Consolas, 'Courier New', monospace;
+    font-size: 0.8rem;
+    background: #1e293b;
+    padding: 2px 5px;
+    border-radius: 3px;
+    opacity: 0.9;
+    color: #fff;
+}
+
+.notification {
+    animation: notificationInbound 0.5s;
+}
+
+@keyframes notificationInbound {
+    0% {
+        /*margin-left: 200%;*/
+        opacity: 0;
+    }
+    100% {
+        /*margin-left: 0%;*/
+        opacity: 1;
+    }
+}

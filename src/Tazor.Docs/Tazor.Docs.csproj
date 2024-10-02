@@ -24,6 +24,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\tazor\src\Tazor.Components\Tazor.Components.csproj" />
+    <ProjectReference Include="..\..\tazor\src\Tazor.Themes.HighContrast\Tazor.Themes.HighContrast.csproj" />
+    <ProjectReference Include="..\..\tazor\src\Tazor.Themes.VisualStudio\Tazor.Themes.VisualStudio.csproj" />
     <ProjectReference Include="..\..\tazor\src\Tazor.Wasm\Tazor.Wasm.csproj" />
   </ItemGroup>
 

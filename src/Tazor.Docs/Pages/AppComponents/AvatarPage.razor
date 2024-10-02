@@ -6,7 +6,9 @@
 
 
 
-<p class="leading-loose mb-4">Avatars provide a great way to visualize a user context in a page.</p>
+<Lead>
+    Avatars provide a great way to visualize a user context in a page.
+</Lead>
 
 <SubHeader>Avatar Sizing</SubHeader>
 
@@ -42,17 +44,17 @@
 <CodeBlock Code=@Resources.Examples_App_AvatarSizing />
 
 <SubHeader>Avatars With Initials</SubHeader>
-<p>Simply provide the username or formal name to have the avatar show initials</p>
+<Paragraph>Simply provide the username or formal name to have the avatar show initials</Paragraph>
 <Avatar Name="John Doe" />
 
 <SubHeader>Specifying An Image</SubHeader>
-<p>Provide a URL to an image to display the image</p>
+<Paragraph>Provide a URL to an image to display the image</Paragraph>
 <Avatar Url="https://gravatar.com/avatar/HASH" />
 
 <CodeBlock Code=@Resources.Examples_App_AvatarUrl />
 
 <SubHeader>Specify a Provider</SubHeader>
-<p>Optionally, you can inject a <code>IAvatarProvider</code> to lookup and provide the URL for a user's identifier. There is a built-in provider, <code>Tazor.Services.GravatarAvatarProvider</code> that will convert e-mail addresses to gravatar urls.</p>
+<Paragraph>Optionally, you can inject a <code>IAvatarProvider</code> to lookup and provide the URL for a user's identifier. There is a built-in provider, <code>Tazor.Services.GravatarAvatarProvider</code> that will convert e-mail addresses to gravatar urls.</Paragraph>
 <Avatar Identifier="john.doe@aol.com" />
 
 <CodeBlock Code=@Resources.Examples_App_AvatarProvider />
