@@ -1,0 +1,44 @@
+﻿@layout DocLayout
+@page "/docs/content/popover"
+
+<PageTitle>Popover - Tazor Docs</PageTitle>
+
+<PageHead Title="Popover" />
+
+<Lead>The Popover component allows a quick and easy way to show small amounts of 
+    content, such as a tooltip. When used in conjunction with a <code>PopoverContainer</code>,
+    it is possible to better control the visibility.</Lead>
+
+
+<SubHeader>Basic Usage</SubHeader>
+<div class="grid grid-cols-2 gap-4">
+    <div>
+        <p class="mb-2">Click the button to toggle the popover.</p>
+        <PopoverContainer AllowHover="false">
+            <Button 
+                Clicked=@(() => { _isClickPopoverOpen = !_isClickPopoverOpen; StateHasChanged(); }) 
+                Type="ButtonType.Primary">Toggle Popover</Button>
+            <Popover Title="Popover Title" @bind-IsOpen=_isClickPopoverOpen>
+                This is some content!
+            </Popover>
+        </PopoverContainer>
+    </div>
+    <div>
+        <p class="mb-2">Use the <code>AllowHover</code> parameter to support hovering. Try it below!</p>
+        <PopoverContainer AllowHover="true">
+            <Button 
+                Clicked=@(() => { _isHoverPopoverOpen = !_isHoverPopoverOpen; StateHasChanged(); }) 
+                Type="ButtonType.Primary">Toggle Popover</Button>
+            <Popover Title="Popover Title" @bind-IsOpen=_isHoverPopoverOpen>
+                This is some content!
+            </Popover>
+        </PopoverContainer>
+    </div>
+</div>
+
+<CodeBlock Code=@Resources.Examples_Content_Popover_BasicUsage />
+
+@code {
+    private bool _isClickPopoverOpen;
+    private bool _isHoverPopoverOpen;
+}
