@@ -13,6 +13,8 @@
 <p class="mb-3">The TreeView component relies on two primary properties: Items and RequestTree. While it is possible to supply the entire tree of items using only the Tree property, it is also possible to dynamically build the tree by responding to RequestTree calls.</p>
 
 <TreeView Items="@Items" RequestTree="@RequestTree" />
+<CodeBlock Code=@Resources.Examples_Data_TreeView_Basic Language="razor" />
+
 @code {
     protected IEnumerable<ITreeItem> Items { get; set; } = Enumerable.Empty<ITreeItem>();
 
@@ -49,5 +51,3 @@
         );
     }
 }
-
-<CodeBlock Code=@Resources.Examples_Data_TreeView_Basic />

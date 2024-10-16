@@ -1,5 +1,10 @@
-// For WASM
-await builder.AddTazorAsync();
+// Developers may override default services by using the "With" methods
+builder.Services
+    .AddTazor()
+    .Build();
+
+// For WASM, enables theming
+await app.UseTazor();
 
 // For Server-Side
 // Coming soon.

@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<CodeBlock Code=@Resources.Examples_App_AvatarSizing />
+<CodeBlock Code=@Resources.Examples_App_AvatarSizing Language="razor" />
 
 <SubHeader>Avatars With Initials</SubHeader>
 <Paragraph>Simply provide the username or formal name to have the avatar show initials</Paragraph>
@@ -52,10 +52,10 @@
 <Paragraph>Provide a URL to an image to display the image</Paragraph>
 <Avatar Url="https://gravatar.com/avatar/HASH" />
 
-<CodeBlock Code=@Resources.Examples_App_AvatarUrl />
+<CodeBlock Code=@Resources.Examples_App_AvatarUrl Language="razor" />
 
 <SubHeader>Specify a Provider</SubHeader>
 <Paragraph>Optionally, you can inject a <code>IAvatarProvider</code> to lookup and provide the URL for a user's identifier. There is a built-in provider, <code>Tazor.Services.GravatarAvatarProvider</code> that will convert e-mail addresses to gravatar urls.</Paragraph>
 <Avatar Identifier="john.doe@aol.com" />
 
-<CodeBlock Code=@Resources.Examples_App_AvatarProvider />
+<CodeBlock Code=@Resources.Examples_App_AvatarProvider Language="csharp" />

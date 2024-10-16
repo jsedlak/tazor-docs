@@ -1,0 +1,4 @@
+<PingContainer>
+    <Avatar Name="John Doe" Size="Sizing.Medium" />
+    <Ping>4</Ping>
+</PingContainer>

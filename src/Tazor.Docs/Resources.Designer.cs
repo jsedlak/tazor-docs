@@ -61,8 +61,120 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to // For WASM
-        ///await builder.AddTazorAsync();
+        ///   Looks up a localized string similar to @tailwind base;
+        ///@tailwind components;
+        ///@tailwind utilities;
+        ///
+        ///.notification {
+        ///    animation: notificationInbound 0.5s;
+        ///}
+        ///
+        ///@keyframes notificationInbound {
+        ///    0% {
+        ///        /*margin-left: 200%;*/
+        ///        opacity: 0;
+        ///    }
+        ///
+        ///    100% {
+        ///        /*margin-left: 0%;*/
+        ///        opacity: 1;
+        ///    }
+        ///}
+        ///.
+        /// </summary>
+        public static string Documentation_CustomTheme_CSS {
+            get {
+                return ResourceManager.GetString("Documentation_CustomTheme_CSS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to using System.Text.Json;
+        ///using Tazor.Components.Builder;
+        ///using Tazor.Components.Theming;
+        ///
+        ///namespace Tazor.Themes.HighContrast;
+        ///
+        ///public static class TazorBuilderExtensions
+        ///{
+        ///    public static ITazorBuilder WithHighContrastThemes(this ITazorBuilder builder)
+        ///    {
+        ///        builder.WithTheme(&quot;High Contrast&quot;, () =&gt;
+        ///        {
+        ///            using var stream = new MemoryStream(ThemeFiles.high_contrast);
+        ///
+        ///            // load the theme from the resource file
+        ///            var theme = JsonSerializer.Deseriali [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Documentation_CustomTheme_Extension {
+            get {
+                return ResourceManager.GetString("Documentation_CustomTheme_Extension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to // Setup/Configure Tazor
+        ///builder.Services
+        ///    .AddTazor()
+        ///    .WithHighContrastThemes()
+        ///    .Build();
+        ///
+        ///var app = builder.Build();
+        ///
+        ///// Apply the default theme
+        ///await app.UseTazor(&quot;High Contrast&quot;);
+        ///
+        ///await app.RunAsync();
+        ///.
+        /// </summary>
+        public static string Documentation_CustomTheme_Program {
+            get {
+                return ResourceManager.GetString("Documentation_CustomTheme_Program", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Target Name=&quot;PrepareThemeFiles&quot; BeforeTargets=&quot;PrepareForBuild&quot;&gt;
+        ///	&lt;Exec Command=&quot;npx tailwindcss -i ./Themes/high-contrast.theme.css -o ./wwwroot/high-contrast.theme.css&quot; /&gt;
+        ///&lt;/Target&gt;.
+        /// </summary>
+        public static string Documentation_CustomTheme_ProjectBuild {
+            get {
+                return ResourceManager.GetString("Documentation_CustomTheme_ProjectBuild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;app&quot;: {
+        ///    &quot;avatar&quot;: {
+        ///      &quot;wrapper&quot;: &quot;rounded-full bg-indigo-400 flex justify-center items-center overflow-hidden&quot;,
+        ///      &quot;mage&quot;: &quot;&quot;,
+        ///      &quot;initials&quot;: &quot;text-center block font-bold&quot;,
+        ///      &quot;extraSmall&quot;: &quot;w-4 h-4 text-xs&quot;,
+        ///      &quot;small&quot;: &quot;w-6 h-6 text-sm&quot;,
+        ///      &quot;medium&quot;: &quot;w-10 h-10&quot;,
+        ///      &quot;large&quot;: &quot;w-20 h-20 text-4xl&quot;,
+        ///      &quot;extraLarge&quot;: &quot;w-32 h-32 text-6xl&quot;
+        ///    },
+        ///    &quot;notifications&quot;: {
+        ///      &quot;containerWrapper&quot;: &quot;pointer-events-none fixed inset-0 bg-opacity-75 overflow-y-auto bg-red z-50&quot;,
+        ///      [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Documentation_CustomTheme_ResourceFile {
+            get {
+                return ResourceManager.GetString("Documentation_CustomTheme_ResourceFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to // Developers may override default services by using the &quot;With&quot; methods
+        ///builder.Services
+        ///    .AddTazor()
+        ///    .Build();
+        ///
+        ///// For WASM, enables theming
+        ///await app.UseTazor();
         ///
         ///// For Server-Side
         ///// Coming soon..
@@ -98,7 +210,8 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;script src=&quot;_content/Tazor.Components/tazor.js&quot;&gt;&lt;/script&gt;.
+        ///   Looks up a localized string similar to &lt;script src=&quot;/_content/Tazor.Components/prism.js&quot; data-manual&gt;&lt;/script&gt;
+        ///&lt;script src=&quot;_content/Tazor.Components/tazor.js&quot;&gt;&lt;/script&gt;.
         /// </summary>
         public static string Documentation_Install_JavascriptFile {
             get {
@@ -143,7 +256,7 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;Avatar Identifier=&quot;john.doe@aol.com&quot; /&gt;
+        ///   Looks up a localized string similar to // In Razor: &lt;Avatar Identifier=&quot;john.doe@aol.com&quot; /&gt;
         ///
         ///// In Program.cs, register your provider
         ///builder.Services.AddScoped&lt;IAvatarProvider, GravatarAvatarProvider&gt;();
@@ -155,7 +268,7 @@ namespace Tazor.Docs {
         ///    {
         ///        var hasher = System.Security.Cryptography.SHA256.Create();
         ///        var hash = hasher.ComputeHash(Encoding.UTF8.GetBytes(identifier));
-        ///        return Task.FromResult&lt;string?&gt;($&quot;https:// [rest of string was truncated]&quot;;.
+        ///        return Task.FromResult&lt;string [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Examples_App_AvatarProvider {
             get {
@@ -226,6 +339,18 @@ namespace Tazor.Docs {
         public static string Examples_App_NotificationSimple {
             get {
                 return ResourceManager.GetString("Examples_App_NotificationSimple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;PingContainer&gt;
+        ///    &lt;Avatar Name=&quot;John Doe&quot; Size=&quot;Sizing.Medium&quot; /&gt;
+        ///    &lt;Ping&gt;4&lt;/Ping&gt;
+        ///&lt;/PingContainer&gt;.
+        /// </summary>
+        public static string Examples_App_Ping {
+            get {
+                return ResourceManager.GetString("Examples_App_Ping", resourceCulture);
             }
         }
         

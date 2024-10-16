@@ -1,4 +1,4 @@
-<Avatar Identifier="john.doe@aol.com" />
+// In Razor: <Avatar Identifier="john.doe@aol.com" />
 
 // In Program.cs, register your provider
 builder.Services.AddScoped<IAvatarProvider, GravatarAvatarProvider>();

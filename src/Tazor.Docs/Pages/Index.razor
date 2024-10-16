@@ -2,23 +2,39 @@
 
 <PageTitle>Tazor - A Blazor/Tailwind UI Component Library</PageTitle>
 
-<div class="flex justify-center items-center text-4xl p-10 mb-10 leading-loose" style="height:600px;width:100%;background-image: url('/img/bg.png');background-size:cover;">
-    <h1 class="text-center px-10 mx-auto font-bold">Tazor is a developer focused component library built with Blazor and styled with Tailwind CSS</h1>
-</div>
+<div class="relative flex justify-center items-center p-10 mb-10 leading-loose" style="height:800px;width:100%;background-image: url('/img/bg.png');background-size:cover;">
+    <img class="absolute left-0 top-0 w-full h-full opacity-25" src="/img/grid-perspective.png" />
+    <img class="absolute left-0 top-0 w-full h-full opacity-25" src="/img/stars.png" />
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full xl:w-9/12 mx-auto z-50">
+        <div class="flex items-center justify-center">
+            <div class="flex-shrink-1"> 
+                <h1 class="text-4xl mb-4 leading-loose text-center px-10 mx-auto font-bold">Embracing Tailwind CSS the Blazor way. Focus on building apps, not components.</h1>
 
-<div class="w-10/12 mx-auto">
-    <div class="p-10">
-        <h1 class="text-2xl text-center">Our Tenets</h1>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="text-center bg-gray-900 text-white p-4 rounded-lg">
-            <Lead>Build components that are easy to understand and use</Lead>
+                <div class="flex gap-4 items-center justify-center">
+                    <Button Href="/docs" Type="ButtonType.Default">
+                        Get Started
+                        @HeroIcons.ArrowRight("inline-block ml-2")
+                    </Button>wwww
+                    <Button Href="/docs" Type="ButtonType.Default">
+                        View the Components
+                        @HeroIcons.ArrowRight("inline-block ml-2")
+                    </Button>
+                </div>
+            </div>
+            
         </div>
-        <div class="text-center bg-gray-900 text-white p-4 rounded-lg">
-            <Lead>Embrace Tailwind, and allow for full customization of the applied classes</Lead>
-        </div>
-        <div class="text-center bg-gray-900 text-white p-4 rounded-lg">
-            <Lead></Lead>
+        <div class="flex items-center justify-center">
+            <div class="bg-gray-800 border-gray-600 border rounded p-10">
+                <Notification Type="NotificationType.Success">
+                    <Icon>
+                        @HeroIcons.CheckBadge()
+                    </Icon>
+                    <Title>Content item saved!</Title>
+                    <Message>Your content item has been saved successfully.</Message>
+                </Notification>
+
+                <CodeBlock Code="@Resources.Examples_App_NotificationSimple" />
+            </div>
         </div>
     </div>
 </div>

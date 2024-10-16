@@ -11,7 +11,7 @@
 <p>Simply pass a list of <code>NavItem</code> objects and let the breadcrumb do the rest. The default delimiter is the forward slash character.</p>
 
 <Breadcrumb Items="_breadcrumb" />
-<CodeBlock Code=@Resources.Examples_Navigation_Breadcrumb_Basic />
+<CodeBlock Code=@Resources.Examples_Navigation_Breadcrumb_Basic Language="razor" />
 
 <h2 class="text-2xl font-semibold mt-3 mb-1">Custom Delimiter</h2>
 
@@ -23,7 +23,7 @@
     </DelimiterTemplate>
 </Breadcrumb>
 
-<CodeBlock Code=@Resources.Examples_Navigation_Breadcrumb_CustomDelimiter />
+<CodeBlock Code=@Resources.Examples_Navigation_Breadcrumb_CustomDelimiter Language="razor" />
 
 @code {
     private IEnumerable<NavItem> _breadcrumb = new NavItem[]

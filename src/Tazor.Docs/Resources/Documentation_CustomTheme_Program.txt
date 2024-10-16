@@ -1,0 +1,12 @@
+// Setup/Configure Tazor
+builder.Services
+    .AddTazor()
+    .WithHighContrastThemes()
+    .Build();
+
+var app = builder.Build();
+
+// Apply the default theme
+await app.UseTazor("High Contrast");
+
+await app.RunAsync();

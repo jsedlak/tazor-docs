@@ -17,7 +17,7 @@
     <Message>This is a notification message.</Message>
 </Notification>
 
-<CodeBlock Code=@Resources.Examples_App_NotificationSimple />
+<CodeBlock Code=@Resources.Examples_App_NotificationSimple Language="razor" />
 
 <SubHeader>Containers</SubHeader>
 <Paragraph>Containers are a way to globalize the display of notifications. They can be included inline as part of the page or as a global overlay. The container relies on an injected <code>INotificationProvider</code> class that manages the lifetime of notifications. An In Memory implementation is provided out-of-the-box.</Paragraph>
@@ -37,7 +37,7 @@
 
 <NotificationContainer />
 
-<CodeBlock Code=@Resources.Examples_App_NotificationContainers />
+<CodeBlock Code=@Resources.Examples_App_NotificationContainers Language="razor" />
 
 @code {
     private void OnClickedAdd()

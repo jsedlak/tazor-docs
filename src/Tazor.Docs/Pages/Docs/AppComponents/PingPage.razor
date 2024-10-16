@@ -1,0 +1,21 @@
+﻿@layout DocLayout
+@page "/docs/app/ping"
+
+<PageTitle>Ping - Tazor Docs</PageTitle>
+
+<PageHead Title="Ping" />
+
+
+
+<Lead>
+    Pings provide a way to highlight important bits of information. Wrap your content in a <code>PingContainer</code>, which provides the basis for positioning, and then include a <code>Ping</code> component with the appropriate information.
+</Lead>
+
+<div class="flex my-3 mx-auto w-1/2 justify-center items-center">
+    <PingContainer>
+        <Avatar Name="John Doe" Size="Sizing.Medium" />
+        <Ping>4</Ping>
+    </PingContainer>
+</div>
+
+<CodeBlock Language="razor" Code="@Resources.Examples_App_Ping" />

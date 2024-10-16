@@ -1,10 +1,8 @@
 <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
     <StatCard>
         <Title>
-            <div class="space-x-2">
-                @HeroIcons.ChartPie("inline-block")
-                <span>Total Revenue</span>
-            </div>
+            @HeroIcons.ChartPie("inline-block")
+            <span>Total Revenue</span>
         </Title>
         <AdditionalData>
             <div>
@@ -21,10 +19,8 @@
 
     <StatCard>
         <Title>
-            <div class="space-x-2">
-                @HeroIcons.ChartPie("inline-block")
-                <span>Retail Sentiment</span>
-            </div>
+            @HeroIcons.ChartPie("inline-block")
+            <span>Retail Sentiment</span>
         </Title>
         <AdditionalData>
             <div>

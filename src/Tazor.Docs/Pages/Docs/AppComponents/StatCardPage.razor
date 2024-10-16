@@ -5,20 +5,20 @@
 
 <PageHead Title="Stat Card" />
 
-<Lead>The Statistics Card, or StatCard, component provides a consistent way to elevate key metrics
+<Lead>
+    The Statistics Card, or StatCard, component provides a consistent way to elevate key metrics
     in the page. Each portion of the card is supported by a <code>RenderFragment</code>, so you
     are free to throw any sort of content at it that will fit. Similarly, the Additional Data and Note
-    fragments are completely optional.</Lead>
+    fragments are completely optional.
+</Lead>
 
 <SubHeader>Basic Usage</SubHeader>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
     <StatCard>
         <Title>
-            <div class="space-x-2">
-                @HeroIcons.ChartPie("inline-block")
-                <span>Total Revenue</span>
-            </div>
+            @HeroIcons.ChartPie("inline-block")
+            <span>Total Revenue</span>
         </Title>
         <AdditionalData>
             <div>
@@ -35,10 +35,8 @@
 
     <StatCard>
         <Title>
-            <div class="space-x-2">
-                @HeroIcons.ChartPie("inline-block")
-                <span>Retail Sentiment</span>
-            </div>
+            @HeroIcons.ChartPie("inline-block")
+            <span>Retail Sentiment</span>
         </Title>
         <AdditionalData>
             <div>
@@ -68,4 +66,4 @@
     </StatCard>
 </div>
 
-<CodeBlock Code="@Resources.Examples_App_StatCard" />
+<CodeBlock Code="@Resources.Examples_App_StatCard" Language="razor" />

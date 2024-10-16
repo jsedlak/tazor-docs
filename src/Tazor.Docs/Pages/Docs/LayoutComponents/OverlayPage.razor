@@ -11,7 +11,7 @@
 <p class="mb-3">The Overlay component provides a unified approach to displaying content above the page, highlighted by a darkened/lightened background.</p>
 
 <Button Clicked=@(() => { _isVisible = true; StateHasChanged(); })>Open Overlay</Button>
-<CodeBlock Code=@Resources.Examples_Layout_Overlay_Basic />
+<CodeBlock Code=@Resources.Examples_Layout_Overlay_Basic Language="razor" />
 
 <Overlay IsVisible=@_isVisible ContentClass="flex justify-center items-center h-full w-full">
     <Button Clicked=@(() => { _isVisible = false; StateHasChanged(); })>

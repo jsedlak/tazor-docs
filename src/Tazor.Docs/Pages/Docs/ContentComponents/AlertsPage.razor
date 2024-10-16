@@ -5,50 +5,47 @@
 
 <PageHead Title="Alerts" />
 
-<p class="leading-loose mb-4">Alerts are a great way to notify users of important information, whether it's notifying of pending system maintenance, request success, or warnings from background processes.'</p>
+<Lead>Alerts are a great way to notify users of important information, whether it's notifying of pending system maintenance, request success, or warnings from background processes.</Lead>
 
-<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
-@if (_selectedExampleNavItem?.Key == "demo")
-{
-    <Alert Type=@AlertType.Info Title="Test Info Alert">
-        <Content>
-            <p class="leading">This is an info alert!</p>
-        </Content>
-    </Alert>
 
-    <Alert Type=@AlertType.Success Title="Test Success Alert">
-        <Content>
-            <p class="leading">This is a success alert!</p>
-        </Content>
-    </Alert>
+<Alert Type=@AlertType.Info Title="Test Info Alert">
+    <Content>
+        <p class="leading">This is an info alert!</p>
+    </Content>
+</Alert>
 
-    <Alert Type=@AlertType.Warning Title="Test Warning Alert">
-        <Content>
-            <p class="leading">This is an alert that is warning you!</p>
-        </Content>
-    </Alert>
+<Alert Type=@AlertType.Success Title="Test Success Alert">
+    <Content>
+        <p class="leading">This is a success alert!</p>
+    </Content>
+</Alert>
 
-    <Alert Type=@AlertType.Error Title="Test Error Alert">
-        <Content>
-            <p class="leading">This is an error alert!</p>
-        </Content>
-    </Alert>
+<Alert Type=@AlertType.Warning Title="Test Warning Alert">
+    <Content>
+        <p class="leading">This is an alert that is warning you!</p>
+    </Content>
+</Alert>
 
-    <Alert Type=@AlertType.Custom Title="Custom Alert" Class="bg-purple-100 border-purple-500 text-purple-500">
-        <Icon>
-            @HeroIconsSolid.Calculator()
-        </Icon>
-        <Content>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis tristique sollicitudin nibh sit.
-        </Content>
-        <LinkContent>
-            <Button>Test Button</Button>
-        </LinkContent>
-    </Alert>
-}
-else {
-    <CodeBlock Code=@Resources.Examples_Alerts />
-}
+<Alert Type=@AlertType.Error Title="Test Error Alert">
+    <Content>
+        <p class="leading">This is an error alert!</p>
+    </Content>
+</Alert>
+
+<Alert Type=@AlertType.Custom Title="Custom Alert" Class="bg-purple-100 border-purple-500 text-purple-500">
+    <Icon>
+        @HeroIconsSolid.Calculator()
+    </Icon>
+    <Content>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis tristique sollicitudin nibh sit.
+    </Content>
+    <LinkContent>
+        <Button>Test Button</Button>
+    </LinkContent>
+</Alert>
+
+<CodeBlock Code=@Resources.Examples_Alerts Language="razor" />
+
 
 @code {
     private class Invoice
@@ -61,13 +58,6 @@ else {
 
         public bool Paid { get; set; }
     }
-
-    private NavItem? _selectedExampleNavItem;
-    private IEnumerable<NavItem> _exampleNavItems = new[]
-    {
-        new NavItem("Demo"),
-        new NavItem("Code")
-    };
 
     private IEnumerable<Invoice> _invoices = Enumerable.Empty<Invoice>();
 

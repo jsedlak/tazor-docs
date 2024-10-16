@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Themes", "2. Themes", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. App", "3. App", "{9462D8C8-E37A-42E4-B0ED-5AD1C4EAA43D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Themes.VisualStudio", "tazor\src\Tazor.Themes.VisualStudio\Tazor.Themes.VisualStudio.csproj", "{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Themes.VisualStudio", "tazor\src\Tazor.Themes.VisualStudio\Tazor.Themes.VisualStudio.csproj", "{B5BCEAAE-23B9-4BC4-8898-064F7C0AB882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Themes.HighContrast", "tazor\src\Tazor.Themes.HighContrast\Tazor.Themes.HighContrast.csproj", "{84C21997-D920-4D2E-A9F0-327C8402D194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Themes.HighContrast", "tazor\src\Tazor.Themes.HighContrast\Tazor.Themes.HighContrast.csproj", "{84C21997-D920-4D2E-A9F0-327C8402D194}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
