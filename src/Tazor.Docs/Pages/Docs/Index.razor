@@ -1,0 +1,41 @@
+﻿@layout DocLayout
+@page "/docs"
+
+<PageTitle>Tazor Docs</PageTitle>
+
+@* GETTING STARTED *@
+<h1 class="text-4xl font-semibold mt-8 mb-4" id="introduction">Getting Started</h1>
+
+<Lead>
+    Tazor is a simple UI toolkit for Blazor, built on TailwindCSS v3. The goal is to create a handful of components that may be used to create an application. 
+    If you like what you see, please consider <a href="https://github.com/jsedlak/tazor" target="_blank">contributing @HeroIcons.ArrowTopRightOnSquare("inline-block", "w-4 h-4")</a> to the project, 
+    whether it's feedback or pull requests.
+</Lead>
+
+@*INSTALLING TAZOR*@
+<h2 class="text-2xl font-semibold mt-8 mb-4" id="installing">Installing Tazor</h2>
+
+<p>Add the following packages to your WASM project.</p> 
+<ul class="list-disc ml-10 my-3">
+    <li><a href="https://www.nuget.org/packages/Tazor.Components" target="_blank">Tailwind.Components @HeroIcons.ArrowTopRightOnSquare("inline-block", "w-4 h-4")</a></li>
+    <li><a href="https://www.nuget.org/packages/Tazor.Wasm" target="_blank">Tailwind.Wasm @HeroIcons.ArrowTopRightOnSquare("inline-block", "w-4 h-4")</a></li>
+</ul>
+
+<p>
+    Call the appropriate <code>AddTazorAsync</code> method in your Program file(s)
+</p>
+<CodeBlock Title="Program.cs" Code=@Resources.Documentation_Install_AddTazorAsync Language="csharp" />
+
+<p>Include the javascript to enable JS/DOM enhanced components. Tazor also uses Prism to provide syntax highlighting for the CodeBlock component.</p>
+<CodeBlock Title="index.html" Code=@Resources.Documentation_Install_JavascriptFile Language="razor" />
+
+@* TAILWIND CLI *@
+<h2 class="text-2xl font-semibold mt-8 mb-4" id="tailwindcli">Tailwind CLI</h2>
+
+<Paragraph>
+    Tazor uses Tailwind CSS v3 and relies on Tailwind CLI to build the stylesheets prior to runtime. Theme packages will include any required CSS files, which are automatically added to the DOM at runtime.
+</Paragraph>
+
+<Paragraph>To add additional tailwind class support, consider using Tailwind CLI to maintain your own CSS file. This site uses a stylesheet, <code>app.css</code>, in the <code>Styles</code> folder and builds into a CSS in the wwwroot. You may change these paths to suit your needs.</Paragraph>
+
+<CodeBlock Title="start-tailwind.ps1" Code=@Resources.Documentation_TailwindCli_PowerShell Language="razor" />

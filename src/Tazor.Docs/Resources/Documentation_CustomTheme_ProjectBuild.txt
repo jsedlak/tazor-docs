@@ -1,0 +1,3 @@
+<Target Name="PrepareThemeFiles" BeforeTargets="PrepareForBuild">
+	<Exec Command="npx tailwindcss -i ./Themes/high-contrast.theme.css -o ./wwwroot/high-contrast.theme.css" />
+</Target>

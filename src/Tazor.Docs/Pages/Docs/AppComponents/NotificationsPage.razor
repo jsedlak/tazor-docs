@@ -1,0 +1,65 @@
+﻿@layout DocLayout
+@page "/docs/app/notifications"
+@inject INotificationProvider NotificationProvider
+<PageTitle>Notifications - Tazor Docs</PageTitle>
+
+<PageHead Title="Notifications" />
+
+<Lead>The Notification component provides a way to display messages to the user. You can display notifications by themselves, or utilize the built-in <code>NotificationContainer</code> component to globalize their display.</Lead>
+
+<SubHeader>Notifications</SubHeader>
+<p>Notifications can be manually displayed within any container you design. Simply use the <code>Notification</code> component.</p>
+<Notification Type="NotificationType.Success">
+    <Icon>
+        @HeroIcons.AcademicCap()
+    </Icon>
+    <Title>Notification Title</Title>
+    <Message>This is a notification message.</Message>
+</Notification>
+
+<CodeBlock Code=@Resources.Examples_App_NotificationSimple Language="razor" />
+
+<SubHeader>Containers</SubHeader>
+<Paragraph>Containers are a way to globalize the display of notifications. They can be included inline as part of the page or as a global overlay. The container relies on an injected <code>INotificationProvider</code> class that manages the lifetime of notifications. An In Memory implementation is provided out-of-the-box.</Paragraph>
+
+<Paragraph>Notifications are displayed, by default, for 5 seconds, but may be shown indefinitely by setting their duration to 0.</Paragraph>
+
+<Paragraph>Notification Containers will display a default message (Property: <code>EmptyMessage</code>) when no notifications exist. This may be disabled through the theme or by setting <code>EmptyMessage</code> to null.</Paragraph>
+
+<div class="flex gap-4 my-3">
+    <Button Clicked=@OnClickedAdd Type="ButtonType.SuccessOutline">Add Notification</Button>
+    <Button Clicked=@OnClickedAddPermanent Type="ButtonType.ErrorOutline">Add Permanent</Button>
+</div>
+
+<div class="bg-gray-900 p-3 rounded">
+    <NotificationContainer Inline="true" />
+</div>
+
+<NotificationContainer />
+
+<CodeBlock Code=@Resources.Examples_App_NotificationContainers Language="razor" />
+
+@code {
+    private void OnClickedAdd()
+    {
+        NotificationProvider.Add(new NotificationItem
+            {
+                Type = NotificationType.Success,
+                Title = "Notification Title",
+                Message = "This is a notification message."
+            }
+        );
+    }
+
+    private void OnClickedAddPermanent()
+    {
+        NotificationProvider.Add(new NotificationItem
+            {
+                Type = NotificationType.Error,
+                Title = "Notification Title",
+                Message = "This is a persistent notification."
+            }, 
+            0
+        );
+    }
+}

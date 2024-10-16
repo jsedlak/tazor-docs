@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Tazor.ServiceModel;
-using Tazor.Services;
 using Tazor.Components;
 using Tazor.Components.App;
 using Tazor.Themes.HighContrast;
@@ -13,16 +11,20 @@ builder.RootComponents.Add<Tazor.Docs.App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-builder.Services.AddScoped<IAvatarProvider, GravatarAvatarProvider>();
 
+// Inject all tazor services
+// Developers may override default services by using the "With" methods
 builder.Services
     .AddTazor()
     .WithInMemoryNotifications()
+    .WithGravatars()
     .WithHighContrastThemes()
     .WithVisualStudioThemes()
     .Build();
 
 var app = builder.Build();
 
+// Apply the default theme
 await app.UseTazor();
+
 await app.RunAsync();

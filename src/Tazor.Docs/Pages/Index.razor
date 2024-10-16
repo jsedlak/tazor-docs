@@ -1,41 +1,40 @@
 ﻿@page "/"
 
-<PageTitle>Tazor Docs</PageTitle>
+<PageTitle>Tazor - A Blazor/Tailwind UI Component Library</PageTitle>
 
-@* GETTING STARTED *@
-<h1 class="text-4xl font-semibold mt-8 mb-4" id="introduction">Getting Started</h1>
+<div class="relative flex justify-center items-center p-10 mb-10 leading-loose" style="height:800px;width:100%;background-image: url('/img/bg.png');background-size:cover;">
+    <img class="absolute left-0 top-0 w-full h-full opacity-25" src="/img/grid-perspective.png" />
+    <img class="absolute left-0 top-0 w-full h-full opacity-25" src="/img/stars.png" />
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full xl:w-9/12 mx-auto z-50">
+        <div class="flex items-center justify-center">
+            <div class="flex-shrink-1"> 
+                <h1 class="text-4xl mb-4 leading-loose text-center px-10 mx-auto font-bold">Embracing Tailwind CSS the Blazor way. Focus on building apps, not components.</h1>
 
-<p class="leading-loose text-lg">
-    Tazor is a simple UI toolkit for Blazor, built on TailwindCSS v3. The goal is to create a handful of components that may be used to create an application. 
-    If you like what you see, please consider <a href="https://github.com/jsedlak/tazor" target="_blank">contributing @HeroIcons.ArrowTopRightOnSquare("inline-block", "w-4 h-4")</a> to the project, 
-    whether it's feedback or pull requests.
-</p>
+                <div class="flex gap-4 items-center justify-center">
+                    <Button Href="/docs" Type="ButtonType.Default">
+                        Get Started
+                        @HeroIcons.ArrowRight("inline-block ml-2")
+                    </Button>wwww
+                    <Button Href="/docs" Type="ButtonType.Default">
+                        View the Components
+                        @HeroIcons.ArrowRight("inline-block ml-2")
+                    </Button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="flex items-center justify-center">
+            <div class="bg-gray-800 border-gray-600 border rounded p-10">
+                <Notification Type="NotificationType.Success">
+                    <Icon>
+                        @HeroIcons.CheckBadge()
+                    </Icon>
+                    <Title>Content item saved!</Title>
+                    <Message>Your content item has been saved successfully.</Message>
+                </Notification>
 
-@*INSTALLING TAZOR*@
-<h2 class="text-2xl font-semibold mt-8 mb-4" id="installing">Installing Tazor</h2>
-
-<p>Add the package, <a href="https://www.nuget.org/packages/Tazor.Components" target="_blank">Tailwind.Components @HeroIcons.ArrowTopRightOnSquare("inline-block", "w-4 h-4")</a></p>
-
-<p>Install the themes into <code>wwwroot</code></p>
-
-<p>Add the cascading theme to your layout</p>
-<CodeBlock Title="MainLayout.razor" Code=@Resources.Documentation_Install_CascadingTheme />
-
-<p>
-    Call the appropriate <code>AddTazorAsync</code> method in your Program file(s)
-</p>
-<CodeBlock Title="Program.cs" Code=@Resources.Documentation_Install_AddTazorAsync />
-
-<p>Include the javascript to enable JS/DOM enhanced components.</p>
-<CodeBlock Title="index.html" Code=@Resources.Documentation_Install_JavascriptFile />
-
-@* TAILWIND CLI *@
-<h2 class="text-2xl font-semibold mt-8 mb-4" id="tailwindcli">Tailwind CLI</h2>
-
-<p>Tazor uses Tailwind CSS v3 and thus, relies on Tailwind CLI to build the stylesheets prior to runtime. 
-    This is why the theme files are included as content - it is the goal of Tazor to use as few Tailwind 
-    classes in its source as possible. This allows the final CSS to remain as slim as possible.</p>
-
-<p>In order to support this, it is recommended to use a simple PoSh script to keep your CSS up-to-date. This site uses a stylesheet, <code>app.css</code>, in the <code>Styles</code> folder and builds into a CSS in the wwwroot. You may change these paths to suit your needs.</p>
-
-<CodeBlock Title="start-tailwind.ps1" Code=@Resources.Documentation_TailwindCli_PowerShell />
+                <CodeBlock Code="@Resources.Examples_App_NotificationSimple" />
+            </div>
+        </div>
+    </div>
+</div>

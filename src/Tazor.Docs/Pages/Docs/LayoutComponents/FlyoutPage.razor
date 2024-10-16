@@ -1,0 +1,36 @@
+﻿@layout DocLayout
+@page "/docs/layout/flyout"
+@inject IThemeManager Theme
+<PageTitle>Flyout - Tazor Docs</PageTitle>
+
+<PageHead Title="Flyout" />
+
+<Lead>The Flyout is an alternative to the Dialog component, offering an overlayed panel attached to one of the screen borders instead of floating in the middle of the window.</Lead>
+
+
+<select @onchange=HandlePanelPlacementChanged class=@Theme.Current.Forms.SelectInput>
+    @foreach (var val in Enum.GetValues(typeof(PanelPlacement)))
+    {
+        <option selected=@((PanelPlacement)val == _selectedPlacement) value=@val>@Enum.GetName(typeof(PanelPlacement), val)</option>
+    }
+</select>
+<Button Clicked=@(() => { _isFlyoutOpen = true; StateHasChanged(); })>Open Flyout</Button>
+<Flyout Placement=_selectedPlacement Title="Test Flyout" @bind-IsVisible=_isFlyoutOpen>
+    <Content>
+        <p>This is test content!</p>
+    </Content>
+</Flyout>
+
+<CodeBlock Code=@Resources.Examples_Flyout Language="razor" />
+
+
+@code {
+    private bool _isFlyoutOpen;
+    private PanelPlacement _selectedPlacement = PanelPlacement.Left;
+
+    private void HandlePanelPlacementChanged(ChangeEventArgs args)
+    {
+        _selectedPlacement = (PanelPlacement)Enum.Parse(typeof(PanelPlacement), args.Value.ToString());
+        StateHasChanged();
+    }
+}

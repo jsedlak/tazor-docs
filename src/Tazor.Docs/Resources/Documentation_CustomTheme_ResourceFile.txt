@@ -1,0 +1,33 @@
+{
+  "app": {
+    "avatar": {
+      "wrapper": "rounded-full bg-indigo-400 flex justify-center items-center overflow-hidden",
+      "mage": "",
+      "initials": "text-center block font-bold",
+      "extraSmall": "w-4 h-4 text-xs",
+      "small": "w-6 h-6 text-sm",
+      "medium": "w-10 h-10",
+      "large": "w-20 h-20 text-4xl",
+      "extraLarge": "w-32 h-32 text-6xl"
+    },
+    "notifications": {
+      "containerWrapper": "pointer-events-none fixed inset-0 bg-opacity-75 overflow-y-auto bg-red z-50",
+      "containerWrapperInline": "",
+      "container": "float-right mr-4 pointer-events-auto",
+      "containerInline": "grid grid-cols-3 gap-4",
+      "wrapper": "notification transition-all ease-in-out duration-300 gap-4 border-l-4 shadow-xl rounded my-3 flex items-center justify-between px-4 py-3",
+      "icon": "flex-shrink-0 min-w-10 flex items-center justify-center",
+      "contentWrapper": "flex-grow",
+      "header": "flex items-center justify-between",
+      "title": "font-bold",
+      "closeIcon": "cursor-pointer",
+      "message": "",
+      "wrapperInfo": "bg-blue-100 border-blue-500 text-blue-700 dark:bg-blue-700 dark:border-blue-900 dark:text-white",
+      "wrapperWarning": "bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-700 dark:border-yellow-900 dark:text-white",
+      "wrapperError": "bg-red-100 border-red-500 text-red-700 dark:bg-red-700 dark:border-red-900 dark:text-white",
+      "wrapperSuccess": "bg-green-100 border-green-500 text-green-700 dark:bg-green-700 dark:border-green-900 dark:text-white",
+      "emptyMessageContainer": "flex w-full h-full items-center justify-center p-4",
+      "emptyMessage": "text-2xl opacity-75"
+    }
+  }
+}

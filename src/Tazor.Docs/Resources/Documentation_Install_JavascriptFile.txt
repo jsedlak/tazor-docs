@@ -1,1 +1,2 @@
+<script src="/_content/Tazor.Components/prism.js" data-manual></script>
 <script src="_content/Tazor.Components/tazor.js"></script>

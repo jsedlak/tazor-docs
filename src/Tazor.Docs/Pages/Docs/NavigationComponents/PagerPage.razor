@@ -1,0 +1,21 @@
+﻿@layout DocLayout
+@page "/docs/navigation/pager"
+
+<PageTitle>Pager - Tazor Docs</PageTitle>
+
+<PageHead Title="Pager" />
+
+<Lead>The Pager is a Blazor component designed to provide a user-friendly navigation interface for paginated content. 
+    It displays a list of page numbers, typically used in conjunction with a larger dataset, allowing users to easily 
+    move between different pages of content. This component simplifies the process of implementing pagination in Blazor 
+    applications, enhancing the user experience by enabling efficient navigation through a series of pages.</Lead>
+
+
+<Pager @bind-CurrentPage=_currentPage NumberOfVisiblePages="10" Pages="500" />
+
+<CodeBlock Code=@Resources.Examples_Pager Language="razor" />
+
+
+@code {
+    private int _currentPage = 35;
+}

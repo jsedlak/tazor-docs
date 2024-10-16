@@ -1,0 +1,21 @@
+﻿@inherits LayoutComponentBase
+@inject IThemeManager ThemeManager
+@* <CascadingValue TValue="ITheme" Value="ThemeManager.Current" Name="Theme"> *@
+    <div class="w-full h-full">
+        <Header />
+        <div class="mx-auto flex w-full items-start gap-x-4" style="align-items:stretch;">
+            <Sidebar />
+            <main class="flex-1 px-4 sm:px-6 lg:px-8 py-10">
+                @Body
+
+                <Footer />
+            </main>
+        </div>
+    </div>
+@* </CascadingValue> *@
+@code {
+    protected override void OnInitialized()
+    {
+        ThemeManager.ThemeChanged += (s, e) => StateHasChanged();
+    }
+}

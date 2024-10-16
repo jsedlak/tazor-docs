@@ -1,0 +1,66 @@
+﻿@layout DocLayout
+@page "/docs/data/templated-grid"
+
+<PageTitle>Templated Grid - Tazor Docs</PageTitle>
+
+<PageHead Title="Templated Grid" />
+
+<Lead>The DataGrid is a Blazor component designed for presenting tabular data in a web application.
+    It offers built-in features for paging and sorting data, enhancing the user experience and making 
+    it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view 
+    different sections of data, and they can also arrange the data in ascending or descending order 
+    based on specific columns for better organization and analysis. This component simplifies the 
+    process of creating dynamic, interactive tables in Blazor web applications, providing a convenient 
+    way to display and manipulate data.</Lead>
+
+<TemplatedGrid Items=_invoices>
+    <ColumnTemplate>
+        <Header>ID</Header>
+        <Cell>@context.Id</Cell>
+    </ColumnTemplate>
+
+    <ColumnTemplate>
+        <Header>Customer</Header>
+        <Cell>@context.Customer</Cell>
+    </ColumnTemplate>
+
+    <ColumnTemplate>
+        <Header>Amount</Header>
+        <Cell>@(string.Format("{0:C}", context.Amount))</Cell>
+    </ColumnTemplate>
+
+    <ColumnTemplate>
+        <Header>Paid</Header>
+        <Cell>@(string.Format("{0:C}", context.Paid))</Cell>
+    </ColumnTemplate>
+</TemplatedGrid>
+
+
+@code {
+    private class Invoice
+    {
+        public int Id { get; set; }
+
+        public string Customer { get; set; } = null!;
+
+        public double Amount { get; set; }
+
+        public bool Paid { get; set; }
+    }
+
+    private IEnumerable<Invoice> _invoices = Enumerable.Empty<Invoice>();
+
+    protected override void OnInitialized()
+    {
+        for (var i = 0; i < 25; i++)
+        {
+            _invoices = _invoices.Append(new Invoice
+                {
+                    Id = i,
+                    Customer = "Customer " + i,
+                    Amount = i * 100,
+                    Paid = i % 2 == 0
+                });
+        }
+    }
+}

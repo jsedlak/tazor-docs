@@ -47,3 +47,9 @@ code {
         opacity: 1;
     }
 }
+
+main a[href] {
+    color: #cecece;
+    text-decoration:underline;
+    cursor: pointer;
+}

@@ -1,20 +1,15 @@
 ﻿@inherits LayoutComponentBase
 @inject IThemeManager ThemeManager
-<CascadingValue TValue="ITheme" Value="ThemeManager.Current" Name="Theme">
-    <div class="w-full">
-        <Header />
-        <div class="mx-auto flex w-full items-start gap-x-4">
-            <aside class="sticky top-0 flex-shrink-0 lg:block bg-indigo-900 px-4 sm:px-6 lg:px-8 py-10 w-1/6">
-                <Sidebar />
-            </aside>
-            <main class="flex-1 px-4 sm:px-6 lg:px-8 py-10">
-                @Body
+@* <CascadingValue TValue="ITheme" Value="ThemeManager.Current" Name="Theme"> *@
+<div class="w-full h-full">
+    <Header />
+    <main class="">
+        @Body
 
-                <Footer />
-            </main>
-        </div>
-    </div>
-</CascadingValue>
+        <Footer />
+    </main>
+</div>
+@* </CascadingValue> *@
 @code {
     protected override void OnInitialized()
     {

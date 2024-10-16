@@ -1,0 +1,46 @@
+﻿@layout DocLayout
+@page "/docs/theming"
+@using Newtonsoft.Json
+@inject IThemeManager ThemeManager
+<PageTitle>Theming - Tazor Docs</PageTitle>
+
+<PageHead Title="Theming" />
+
+<Lead>
+    Theming is central to Tazor and is the single driver of CSS Class 
+    naming across every component. Without a theme, there are no styles. 
+    It is expected that every theme will support both light and dark modes
+    that may be swapped via the standard tailwind approach, and activated via 
+    the DarkModeSwitch component.
+</Lead>
+
+<SubHeader>Custom Themes</SubHeader>
+<Paragraph>
+    Tazor supports custom themes through the host builder fluent API. 
+    To see an example of a custom theme, visit <a href="https://github.com/jsedlak/tazor/tree/main/src/Tazor.Themes.HighContrast" target="_blank">High Contrast Theme @HeroIcons.ArrowTopRightOnSquare("inline-block", "w-4 h-4")</a> on GitHub.
+</Paragraph>
+
+<Paragraph>
+    Create a project to house your theme. In our case, we've named it <code>Tazor.Themes.HighContrast</code>.
+</Paragraph>
+
+<Paragraph>
+    Add a Resource file, and to it add a JSON file that will house all your custom classes. A snapshot of the high contrast theme file is provided below.
+</Paragraph>
+<CodeBlock Title="high-contrast.json" Language="json" Code="@Resources.Documentation_CustomTheme_ResourceFile" />
+
+<Paragraph>
+    Add a custom CSS file with tailwind imports and additional styles. Use Tailwind CLI to generate a CSS file that may be included via the Blazor content pathing. Set the target file to build as Content with "Do Not Copy".
+</Paragraph>
+<CodeBlock Title="high-contrast.theme.css" Language="css" Code="@Resources.Documentation_CustomTheme_CSS" />
+
+<Paragraph>Optionally, you can tell Visual Studio to automatically build your CSS file before every build by adding the following to the csproj file.</Paragraph>
+<CodeBlock Title="Tazor.Themes.HighContrast.csproj" Code="@Resources.Documentation_CustomTheme_ProjectBuild" />
+
+<Paragraph>
+    Add an extension to register the theme with Tazor
+</Paragraph>
+<CodeBlock Title="TazorBuilderExtensions.cs" Language="csharp" Code="@Resources.Documentation_CustomTheme_Extension" />
+
+<Paragraph>Finally, register the theme in <code>Program.cs</code> and tell Tazor WASM to use it.</Paragraph>
+<CodeBlock Title="Program.cs" Language="csharp" Code="@Resources.Documentation_CustomTheme_Program" />

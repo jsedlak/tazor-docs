@@ -1,6 +1,6 @@
 ﻿@inject NavigationManager Navigation
 <li>
-    <a class=@($"text-sm dark:hover:text-white hover:text-black {GetActiveClass()}") href="@Href">@Title</a>
+    <a class="text-sm opacity-80 text-white hover:opacity-100 @(GetActiveClass())" href="@Href">@Title</a>
 </li>
 
 @code {

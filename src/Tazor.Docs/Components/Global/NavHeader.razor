@@ -1,8 +1,8 @@
-﻿<a href=@Href class="font-semibold font-lg">@Title</a>
+﻿<a href=@Href class="font-semibold font-lg text-white">@Title</a>
 
 @code {
     [Parameter]
-    public string Href { get; set; } = "/";
+    public string Href { get; set; } = "#";
 
     [Parameter]
     public string Title { get; set; } = "Untitled";
