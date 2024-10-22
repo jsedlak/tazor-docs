@@ -1,9 +1,9 @@
 ﻿@inherits LayoutComponentBase
 @inject IThemeManager ThemeManager
 @* <CascadingValue TValue="ITheme" Value="ThemeManager.Current" Name="Theme"> *@
-    <div class="w-full h-full">
+    <div class="w-auto h-auto md:w-full md:h-full">
         <Header />
-        <div class="mx-auto flex w-full items-start gap-x-4" style="align-items:stretch;">
+        <div class="mx-auto flex w-full items-start gap-x-4 md:items-stretch">
             <Sidebar />
             <main class="flex-1 px-4 sm:px-6 lg:px-8 py-10">
                 @Body

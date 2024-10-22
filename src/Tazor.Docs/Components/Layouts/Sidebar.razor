@@ -1,86 +1,118 @@
 ﻿@inject NavigationManager Navigation
-<aside class="flex-shrink-0 lg:block bg-indigo-900 sm:px-4 md:px-10 py-10 w-1/6">
-    <ul>
-        <li class="mb-4">
-            <NavHeader Title="App"/>
-            <NavList>
-                <NavListItem Title="Avatar" Href="/docs/app/avatar" />
-                <NavListItem Title="Notifications" Href="/docs/app/notifications" />
-                <NavListItem Title="Ping" Href="/docs/app/ping" />
-                <NavListItem Title="StatCard" Href="/docs/app/stat-card" />
-            </NavList>
-        </li>
-        <li class="mb-4">
-            <NavHeader Title="Layout Components" />
-            <NavList>
-                <NavListItem Title="Accordion" Href="/docs/layout/accordion" />
-                <NavListItem Title="Command Palette" Href="/docs/layout/command-palette" />
-                <NavListItem Title="Dialog" Href="/docs/layout/dialog" />
-                <NavListItem Title="Flyout" Href="/docs/layout/flyout" />
-                <NavListItem Title="Overlay" Href="/docs/layout/overlay" />
-            </NavList>
-        </li>
-        <li class="mb-4">
-            <NavHeader Title="Data Components" />
-            <NavList>
-                <NavListItem Title="Templated Grid" Href="/docs/data/templated-grid" />
-                <NavListItem Title="DataGrid" Href="/docs/data/datagrid" />
-                <NavListItem Title="TreeView" Href="/docs/data/treeview" />
-                <NavListItem Title="ListView" Href="/docs/data/listview" />
-            </NavList>
-        </li>
-        <li class="mb-4">
-            <NavHeader Title="Navigation Components" />
-            <NavList>
-                <NavListItem Title="TabNav" Href="/docs/navigation/tabs" />
-                <NavListItem Title="Breadcrumb" Href="/docs/navigation/breadcrumbs" />
-                <NavListItem Title="Pager" Href="/docs/navigation/pager" />
-            </NavList>
-        </li>
-        <li class="mb-4">
-            <NavHeader Title="Form Components" />
-            <NavList>
-                <NavListItem Title="Buttons" Href="/docs/forms/buttons" />
-                <NavListItem Title="ComboBox" Href="/docs/forms/combobox" />
-                <NavListItem Title="TagBox" Href="/docs/forms/tagbox" />
-                <NavListItem Title="File Upload" Href="/docs/forms/file-upload" />
-                <NavListItem Title="Switch" Href="/docs/forms/switch" />
-                <NavListItem Title="Wizard Progress" Href="/docs/forms/wizard-progress" />
-            </NavList>
-        </li>
-        <li class="mb-4">
-            <NavHeader Title="Content Components" />
-            <NavList>
-                <NavListItem Title="Hero Icons" Href="/docs/content/hero-icons" />
-                <NavListItem Title="Alerts" Href="/docs/content/alerts" />
-                <NavListItem Title="Badges" Href="/docs/content/badges" />
-                <NavListItem Title="Code Block" Href="/docs/content/code-block" />
-                <NavListItem Title="PageHeader" Href="/docs/content/pageheader" />
-                <NavListItem Title="Popover" Href="/docs/content/popover" />
-                <NavListItem Title="Section" Href="/docs/content/section" />
-                <NavListItem Title="Spinner" Href="/docs/content/spinner" />
-            </NavList>
-        </li>
-        <li class="mb-4">
-            <NavHeader Title="Utilities" />
-            <NavList>
-                <NavListItem Title="Click Container" Href="/docs/utilities/click-container" />
-                <NavListItem Title="Dark Mode Switcher" Href="/docs/utilities/dark-mode-switcher" />
-                <NavListItem Title="Breakpoint Indicator" Href="/docs/utilities/breakpoint-indicator" />
-                <NavListItem Title="Theme Switcher" Href="/docs/utilities/theme-switcher" />
-            </NavList>
-        </li>
-        <li class="mb-4">
-            <NavHeader Title="Theming" Href="/docs/theming" />
-        </li>
-    </ul>
+@inject BreakpointInterop BreakpointInterop
+<aside class="flex-shrink-0 lg:block bg-indigo-900 sm:px-4 md:px-10 py-10 w-full md:w-1/6">
+    @if (_isMobileMenuVisible)
+    {
+        <Button Type="ButtonType.DefaultOutline" Clicked="HandleMenuToggled">
+            @HeroIcons.Bars3("inline-block")
+        </Button>
+    }
+
+    @if (_isMenuVisible)
+    {
+        <ul>
+            <li class="mb-4">
+                <NavHeader Title="App" />
+                <NavList>
+                    <NavListItem Title="Avatar" Href="/docs/app/avatar" />
+                    <NavListItem Title="Command Palette" Href="/docs/app/command-palette" />
+                    <NavListItem Title="Notifications" Href="/docs/app/notifications" />
+                    <NavListItem Title="Ping" Href="/docs/app/ping" />
+                    <NavListItem Title="StatCard" Href="/docs/app/stat-card" />
+
+                </NavList>
+            </li>
+            <li class="mb-4">
+                <NavHeader Title="Layout Components" />
+                <NavList>
+                    <NavListItem Title="Accordion" Href="/docs/layout/accordion" />
+                    <NavListItem Title="Dialog" Href="/docs/layout/dialog" />
+                    <NavListItem Title="Flyout" Href="/docs/layout/flyout" />
+                    <NavListItem Title="Overlay" Href="/docs/layout/overlay" />
+                </NavList>
+            </li>
+            <li class="mb-4">
+                <NavHeader Title="Data Components" />
+                <NavList>
+                    <NavListItem Title="DataGrid" Href="/docs/data/datagrid" />
+                    <NavListItem Title="ListView" Href="/docs/data/listview" />
+                    <NavListItem Title="Templated Grid" Href="/docs/data/templated-grid" />
+                    <NavListItem Title="TreeView" Href="/docs/data/treeview" />
+                </NavList>
+            </li>
+            <li class="mb-4">
+                <NavHeader Title="Navigation Components" />
+                <NavList>
+                    <NavListItem Title="Breadcrumb" Href="/docs/navigation/breadcrumbs" />
+                    <NavListItem Title="Pager" Href="/docs/navigation/pager" />
+                    <NavListItem Title="TabNav" Href="/docs/navigation/tabs" />
+                </NavList>
+            </li>
+            <li class="mb-4">
+                <NavHeader Title="Form Components" />
+                <NavList>
+                    <NavListItem Title="Buttons" Href="/docs/forms/buttons" />
+                    <NavListItem Title="ComboBox" Href="/docs/forms/combobox" />
+                    <NavListItem Title="File Upload" Href="/docs/forms/file-upload" />
+                    <NavListItem Title="Switch" Href="/docs/forms/switch" />
+                    <NavListItem Title="TagBox" Href="/docs/forms/tagbox" />
+                    <NavListItem Title="Wizard Progress" Href="/docs/forms/wizard-progress" />
+                </NavList>
+            </li>
+            <li class="mb-4">
+                <NavHeader Title="Content Components" />
+                <NavList>
+                    <NavListItem Title="Alerts" Href="/docs/content/alerts" />
+                    <NavListItem Title="Badges" Href="/docs/content/badges" />
+                    <NavListItem Title="Code Block" Href="/docs/content/code-block" />
+                    <NavListItem Title="Hero Icons" Href="/docs/content/hero-icons" />
+                    <NavListItem Title="PageHeader" Href="/docs/content/pageheader" />
+                    <NavListItem Title="Popover" Href="/docs/content/popover" />
+                    <NavListItem Title="Section" Href="/docs/content/section" />
+                    <NavListItem Title="Spinner" Href="/docs/content/spinner" />
+                </NavList>
+            </li>
+            <li class="mb-4">
+                <NavHeader Title="Utilities" />
+                <NavList>
+                    <NavListItem Title="Breakpoint Indicator" Href="/docs/utilities/breakpoint-indicator" />
+                    <NavListItem Title="Click Container" Href="/docs/utilities/click-container" />
+                    <NavListItem Title="Dark Mode Switcher" Href="/docs/utilities/dark-mode-switcher" />
+                    <NavListItem Title="Theme Switcher" Href="/docs/utilities/theme-switcher" />
+                </NavList>
+            </li>
+            <li class="mb-4">
+                <NavHeader Title="Theming" Href="/docs/theming" />
+            </li>
+        </ul>
+    }
 </aside>
 @code {
-    protected override void OnInitialized()
+    private bool _isMenuVisible = false;
+    private bool _isMobileMenuVisible = false;
+
+    protected override async Task OnInitializedAsync()
     {
         Navigation.LocationChanged += (sender, args) =>
         {
             StateHasChanged();
         };
+
+        BreakpointInterop.BreakpointChanged += (s, args) =>
+        {
+            _isMobileMenuVisible = args.Width < 700;
+            _isMenuVisible = args.Width > 700;
+            StateHasChanged();
+        };
+
+        await BreakpointInterop.Initialize();
+
+        await base.OnInitializedAsync();
+    }
+
+    private async Task HandleMenuToggled()
+    {
+        _isMenuVisible = !_isMenuVisible;
+        StateHasChanged();
     }
 }
