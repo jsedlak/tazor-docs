@@ -9,17 +9,31 @@
 <p class="leading-loose mb-4">The DataGrid is a Blazor component designed for presenting tabular data in a web application. It offers built-in features for paging and sorting data, enhancing the user experience and making it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view different sections of data, and they can also arrange the data in ascending or descending order based on specific columns for better organization and analysis. This component simplifies the process of creating dynamic, interactive tables in Blazor web applications, providing a convenient way to display and manipulate data.</p>
 
 <div class="py-3">
-    <div class="flex gap-2">
-        <Switch @bind-IsChecked=_showCloseButton />
+    <div class="mb-3">
         <Label>Show Close Button</Label>
+        <Switch @bind-IsChecked=_showCloseButton />
     </div>
-    <div class="mt-4">
+    <div class="flex items-center gap-2">
         <Button Clicked=@(() => { _showDialog = true; StateHasChanged(); })>
             @HeroIcons.Window("inline-block w-5 h-5")
             Show Dialog
         </Button>
+
+        <Button Clicked="@(() => { _showNativeDialog = true; StateHasChanged(); })">
+            @HeroIcons.Window("inline-block w-5 h-5")
+            Show Native Dialog
+        </Button>
     </div>
 </div>
+
+<NativeDialog HideCloseButton=!_showCloseButton @bind-IsOpen="_showNativeDialog" Title="Sample Native Dialog">
+    <Content>
+        <p class="leading-loose">This is a dialog! See how it expands to fill the content?</p>
+    </Content>
+    <Footer>
+        <Button Block Type=@ButtonType.SuccessOutline Clicked=@(() => { _showNativeDialog = false; StateHasChanged(); })>Confirm</Button>
+    </Footer>
+</NativeDialog>
 
 <Dialog HideCloseButton=!_showCloseButton @bind-IsVisible=_showDialog Title="Sample Dialog">
     <Content>
@@ -35,5 +49,6 @@
 
 @code {
     private bool _showDialog;
+    private bool _showNativeDialog = false;
     private bool _showCloseButton = true;
 }
