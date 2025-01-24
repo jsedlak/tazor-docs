@@ -18,22 +18,8 @@
             @HeroIcons.Window("inline-block w-5 h-5")
             Show Dialog
         </Button>
-
-        <Button Clicked="@(() => { _showNativeDialog = true; StateHasChanged(); })">
-            @HeroIcons.Window("inline-block w-5 h-5")
-            Show Native Dialog
-        </Button>
     </div>
 </div>
-
-<NativeDialog HideCloseButton=!_showCloseButton @bind-IsOpen="_showNativeDialog" Title="Sample Native Dialog">
-    <Content>
-        <p class="leading-loose">This is a dialog! See how it expands to fill the content?</p>
-    </Content>
-    <Footer>
-        <Button Block Type=@ButtonType.SuccessOutline Clicked=@(() => { _showNativeDialog = false; StateHasChanged(); })>Confirm</Button>
-    </Footer>
-</NativeDialog>
 
 <Dialog HideCloseButton=!_showCloseButton @bind-IsVisible=_showDialog Title="Sample Dialog">
     <Content>
@@ -49,6 +35,5 @@
 
 @code {
     private bool _showDialog;
-    private bool _showNativeDialog = false;
     private bool _showCloseButton = true;
 }
