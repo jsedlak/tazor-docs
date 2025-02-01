@@ -1,3 +1,6 @@
 [submodule "tazor"]
 	path = tazor
 	url = https://github.com/jsedlak/tazor.git
+[submodule "addendum"]
+	path = addendum
+	url = git@github.com:jsedlak/addendum.git
